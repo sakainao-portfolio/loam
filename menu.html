@@ -1,0 +1,302 @@
+<!DOCTYPE html><!-- 文書型宣言（DOCTYPE宣言）。HTML5用 -->
+<html lang="ja"><!-- headとbodyを格納。使用言語が日本語という定義 -->
+	<head><!-- メタデータ（属性情報）を格納する領域 -->
+		<meta charset="utf-8"><!-- 文字エンコーディングはUTF-8 -->
+		<meta name="description" content="ハンドドリップやエスプレッソをベースにした、こだわりのドリンクメニューと、季節のデザートをご用意しています。シングルオリジンからブレンドまで、素材の個性を活かした一杯をお楽しみください。"><!-- 検索結果に表示されるページの説明文。titleの補足（140文字） -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応用。横幅はデバイスの画面幅に合わせ、初期表示の拡大率は等倍。デバイス別のスタイルはCSSで設定 -->
+		<meta name="robots" content="noindex, nofollow, noarchive, nosnippet"><!-- 検索エンジンのクローラーへの指示。ページを登録（noindex）せずリンクをたどらない（nofollow）ように、キャッシュを取得せず（noarchive）スニペットを表示しない（nosnippet）ように -->
+		<meta property="og:title" content="MENU｜LOAM ROASTERS（ロームロースター）"><!-- SNSでシェアされた時のページのタイトル -->
+		<meta property="og:description" content="セレクトも、焙煎も、抽出も。一杯にたどり着くまでのすべてに、妥協はない。LOAM ROASTERSは、生産者や環境への配慮とトッププロの技術が息づく、都心のコーヒーロースターカフェです。"><!-- SNSでシェアされた時の説明文 -->
+		<meta property="og:url" content="https://sakainao-portfolio.github.io/loam/menu.html"><!-- このページのURL -->
+		<meta property="og:image" content="image/loam_logo_ogp.png"><!-- SNSでシェアされた時の表示したい画像のURL -->
+		<meta property="og:type" content="website"><!-- このページの種類（articleは記事や下層ページ、blogはブログ、websiteはサイトのトップページ -->
+		<meta property="og:site_name" content="LOAM ROASTERS（ロームロースター）"><!-- このページが所属するWebサイトの名前 -->
+		<link rel="stylesheet" href="css/style.css"><!-- CSS用。typeは不要。デバイス別のスタイルも一元管理が推奨 -->
+
+		<!-- <link rel="icon" href="image/favicon.ico" sizes="32x32">ファビコンのico用。shortcut省略が標準。sizes="any"だとブラウザごとに対応 -->
+		<link rel="icon" href="image/favicon.png" type="image/png"><!-- ファビコンのpng用。type="image/png"付けるの推奨。高画質用にsizes=""を複数用意するのも可 -->
+		<!-- <link rel="icon" href="image/icon.svg" type="image/svg+xml">ファビコンのsvg用。SVGファイルの使用にはtype="image/svg+xml"が必要 -->
+		<link rel="apple-touch-icon" href="image/apple-touch-icon.png"><!-- ファビコンのスマホ・タブレット用。 -->
+
+		<title>MENU｜LOAM ROASTERS（ロームロースター）</title><!-- 検索エンジンに把握してもらいたいページの内容や目的を簡潔（30文字）かつ魅力的に説明 -->
+	</head>
+	
+	<body><!-- 文書本体要素 -->
+	
+		<!-- ヘッダー -->
+		<header id="header-top">
+		
+			<!-- ヘッダーロゴ -->
+			<div class="header-logo">
+				<a href="index.html"><img src="image/loam_logo_header.png" alt="ショップロゴマーク" class="logo-image"></a>
+			</div>
+			<!-- ヘッダーロゴここまで -->
+			
+			<!-- カートアイコン -->
+			<div class="header-cart">
+				<span class="online-store-btn"><img src="image/loam_icon_shopping.png" alt="カートボタン" class="cart-image"></span>
+			</div>
+			<!-- カートアイコンここまで -->
+			
+			<!-- ハンバーガーメニュー -->
+			<aside class="hamburger-menu">
+				<input type="checkbox" id="menu-btn-check">
+				<label for="menu-btn-check" class="menu-btn"><span></span></label>
+				<!-- メニュー展開時に全体を覆う暗幕 -->
+				<div class="black-overlay"></div>
+				<!-- メニュー展開時に全体を覆う暗幕ここまで -->	
+				<!-- メニューの内容 -->
+				<div class="menu-content">
+					<ul>
+						<li><a href="index.html">TOP</a></li>
+						<li><a href="value.html">OUR VALUE</a></li>
+						<li><a href="menu.html">MENU</a></li>
+						<li><a href="about.html">ABOUT</a></li>
+						<li><a href="contact.html">CONTACT</a></li>
+						<li><a data-href="loam-onlinestore.html" class="online-store-btn">ONLINE STORE</a></li>
+					</ul>
+				</div>
+				<!-- メニューの内容ここまで -->
+			</aside>
+			<!-- ハンバーガーメニューここまで -->
+		
+		</header>
+		<!-- ヘッダーここまで -->
+		
+		
+		
+		<!-- コンテナ -->
+		<div class="container">
+		
+			<!-- グローバルナビゲーションメニュー -->
+			<nav class="global-nav">
+				<ul class="nav-list">
+					<li class="nav-item"><a href="index.html">TOP</a></li>
+					<li class="nav-item"><a href="value.html">OUR VALUE</a></li>
+					<li class="nav-item active"><a href="menu.html">　MENU　</a></li>
+					<li class="nav-item"><a href="about.html">ABOUT</a></li>
+					<li class="nav-item"><a href="contact.html">CONTACT</a></li>
+				</ul>
+			</nav>
+			<!-- グローバルナビゲーションメニューここまで -->
+			
+			<!-- マルチカラム -->
+			<div class="wrapper">
+				<h1>MENU</h1>
+			
+				<!-- メインエリア -->
+				<article class="article-menu">
+					<section class="menu-area">
+						<h2>Coffee</h2>
+						<table class="menulist">
+							<thead>
+								<tr>
+									<th></th>
+									<th colspan="2">ドリップベース</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="3">Hot</th>
+									<td>ブレンド</td>
+									<!-- <td><div class="dashed-leader"></div></td> -->
+									<td>580 円</td>
+								</tr>
+								<tr>
+									<td>シングルオリジン</td>
+									<td>650 円</td>
+								</tr>
+								<tr>
+									<td>アメリカン</td>
+									<td>580 円</td>
+								</tr>
+								<tr>
+									<td colspan="3">　</td>
+								</tr>
+								<tr>
+									<th>Iced</th>
+									<td>アイスブレンド</td>
+									<td>580 円</td>
+								</tr>
+								<!-- <tr>
+									<td colspan="3">　</td>
+								</tr> -->
+							</tbody>
+						</table>
+						<table class="menulist">
+							<thead>
+								<tr>
+									<th></th>
+									<th colspan="2">エスプレッソベース</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th rowspan="5">Hot</th>
+									<td>エスプレッソ</td>
+									<td>400 円</td>
+								</tr>
+								<tr>
+									<td>アメリカーノ</td>
+									<td>580 円</td>
+								</tr>
+								<tr>
+									<td>カプチーノ</td>
+									<td>650 円</td>
+								</tr>
+								<tr>
+									<td>カフェラテ（ラテアート）</td>
+									<td>680 円</td>
+								</tr>
+								<tr>
+									<td>カフェモカ</td>
+									<td>660 円</td>
+								</tr>
+								<tr>
+									<td colspan="3">　</td>
+								</tr>
+								<tr>
+									<th rowspan="4">Iced</th>
+									<td>アイスアメリカーノ</td>
+									<td>580 円</td>
+								</tr>
+								<tr>
+									<td>アイスカフェラテ</td>
+									<td>630 円</td>
+								</tr>
+								<tr>
+									<td>アイスカフェモカ</td>
+									<td>660 円</td>
+								</tr>
+								<tr>
+									<td>エスプレッソトニック</td>
+									<td>700 円</td>
+								</tr>
+								<!-- <tr>
+									<td colspan="3">　</td>
+								</tr> -->
+							</tbody>
+						</table>
+						<h2>Sweets</h2>
+						<table class="menulist">
+							<tbody>
+								<tr>
+									<th rowspan="4">　</th>
+									<td>季節のデザート</td>
+									<td>850 円</td>
+								</tr>
+								<tr>
+									<td>アフォガード</td>
+									<td>750 円</td>
+								</tr>
+								<tr>
+									<td>コーヒーゼリー</td>
+									<td>650 円</td>
+								</tr>
+								<tr>
+									<td>プリン</td>
+									<td>650 円</td>
+								</tr>
+								<!-- <tr>
+									<td colspan="3">　</td>
+								</tr> -->
+							</tbody>
+						</table>
+						<p>ドリンクのみテイクアウトも承ります。</p>
+					</section>
+					<section class="menu-image-area">
+						<div class="menu-box">
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-drip-hot-blend.jpeg);" -->
+								<img src="image/menu-drip-hot-blend.jpeg" alt="ドリップ抽出のホットのブレンドコーヒー" class="menu-image01">
+								<figcaption class="menu-caption">【ドリップベース】<span>ブレンド</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-drip-hot-single_origine.jpeg);" -->
+								<img src="image/menu-drip-hot-single_origine.jpeg" alt="ドリップ抽出のホットのシングルオリジンコーヒー" class="menu-image01">
+								<figcaption class="menu-caption">【ドリップベース】<span>シングルオリジン</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-drip-hot-americano.jpeg);" -->
+								<img src="image/menu-drip-hot-americano.jpeg" alt="ドリップ抽出のホットのアメリカン" class="menu-image01">
+								<figcaption class="menu-caption">【ドリップベース】<span>アメリカン</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-drip-iced-blend.jpeg);" -->
+								<img src="image/menu-drip-iced-blend.jpeg" alt="ドリップ抽出のアイスのブレンドコーヒー" class="menu-image01">
+								<figcaption class="menu-caption">【ドリップベース】<span>アイスブレンド</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-hot-espresso.jpeg);" -->
+								<img src="image/menu-espresso-hot-espresso.jpeg" alt="エスプレッソ抽出のホットのエスプレッソ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>エスプレッソ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-hot-americano.jpeg);" -->
+								<img src="image/menu-espresso-hot-americano.jpeg" alt="エスプレッソ抽出のホットのアメリカーノ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>アメリカーノ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-hot-cappuccino.jpeg);" -->
+								<img src="image/menu-espresso-hot-cappuccino.jpeg" alt="エスプレッソ抽出のホットのカプチーノ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>カプチーノ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-hot-cafe_latte.jpeg);" -->
+								<img src="image/menu-espresso-hot-cafe_latte.jpeg" alt="エスプレッソ抽出のホットのカフェラテ（ラテアート）" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>カフェラテ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-hot-cafe_mocha.jpeg);" -->
+								<img src="image/menu-espresso-hot-cafe_mocha.jpeg" alt="エスプレッソ抽出のホットのカフェモカ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>カフェモカ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-iced-americano.jpeg);" -->
+								<img src="image/menu-espresso-iced-americano.jpeg" alt="エスプレッソ抽出のアイスのアメリカーノ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>アイスアメリカーノ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-iced-cafe_latte.jpeg);" -->
+								<img src="image/menu-espresso-iced-cafe_latte.jpeg" alt="エスプレッソ抽出のアイスのカフェラテ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>アイスカフェラテ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-iced-cafe_mocha.jpeg);" -->
+								<img src="image/menu-espresso-iced-cafe_mocha.jpeg" alt="エスプレッソ抽出のアイスのカフェモカ" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>アイスカフェモカ</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-espresso-iced-espresso_tonic.jpeg);" -->
+								<img src="image/menu-espresso-iced-espresso_tonic.jpeg" alt="エスプレッソ抽出のアイスのエスプレッソトニック" class="menu-image01">
+								<figcaption class="menu-caption">【エスプレッソベース】<span>エスプレッソトニック</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-sweets-seasonal-lemon_tart.jpeg);" -->
+								<img src="image/menu-sweets-seasonal-lemon_tart.jpeg" alt="季節のデザート（画像は自家製レモンタルト）" class="menu-image01">
+								<figcaption class="menu-caption">季節のデザート<span>（画像はレモンタルト）</span></figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-sweets-affogato.jpeg);" alt="アフォガード" -->
+								<img src="image/menu-sweets-affogato.jpeg" class="menu-image01">
+								<figcaption class="menu-caption">アフォガード</figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-sweets-coffee_jelly.jpeg);" -->
+								<img src="image/menu-sweets-coffee_jelly.jpeg" alt="コーヒーゼリー" class="menu-image01">
+								<figcaption class="menu-caption">コーヒーゼリー</figcaption>
+							</figure>
+							<figure class="menu-slide"><!-- style="--thumb: url(image/menu-sweets-custard_pudding.jpeg);" -->
+								<img src="image/menu-sweets-custard_pudding.jpeg" alt="プリン" class="menu-image01">
+								<figcaption class="menu-caption">プリン</figcaption>
+							</figure>
+						</div>
+					</section>
+				</article>
+				<!-- メインエリアここまで -->
+				
+				<!-- ページトップ -->
+				<a class="pagetop" href="#header-top">
+					<div class="pagetop-arrow"></div>
+				</a>
+				<!-- ページトップここまで -->
+			
+			</div>
+			<!-- マルチカラムここまで -->
+		
+		</div>
+		<!-- コンテナここまで -->
+		
+		<!-- フッター -->
+		<footer>
+			<p class="site-notice">このサイトはポートフォリオ制作用の架空サイトです。</p>
+			<p class="copyright">2026 &copy; COTTAGE CAFE All Rights Reserved.</p>
+		</footer>
+		<!-- フッターここまで -->
+	
+	</body>
+</html>
