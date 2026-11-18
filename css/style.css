@@ -1,45 +1,9 @@
-@charset "utf-8";/* 文字エンコーディングはUTF-8 */
+@charset "utf-8";
 
 html {
-	scroll-behavior: smooth;/* 自動的なスクロールを瞬時（auto）ではなく円滑に */
-	font-size: 100%;/* 標準文字サイズ100%=16px。1remの基準サイズ */
+	scroll-behavior: smooth;
+	font-size: 100%;
 }
-
-/* 配色メモ
-#E6E4E0 白いグレー、ベースカラー rgba(230, 228, 224, 0.5)
-#2B2721 黒いブラウン、テキストカラー rgba(43, 39, 33, 0.5)
-#446E72 グリーン、アクセントカラー rgba(68, 110, 114, 0.5)
-
-00 白のグラデーション
-#FFFFFF 白 rgba(255, 255, 255, 0.5)
-#BEBAB3 薄いグレー、ベースより濃い rgba(190, 186, 179, 0.5)
-#9A9488 黒っぽいグレー rgba(154, 148, 136, 0.5)
-
-01 マテリアルカラー
-#8B8B76 暗いベージュ、薄いカーキ rgba(139, 139, 118, 0.5)
-#696A64 暗いグレー、黒いカーキ rgba(105, 106, 100, 0.5)
-
-02 アクセントカラーより控えめ
-#80AAA7 薄いくすみグリーン rgba(128, 170, 167, 0.5) */
-
-/* サイズメモ
-自分のPCの画面サイズ1920px×1200px
-標準文字サイズ100%=16px=1rem */
-
-/* 黄金比のメモ */
-/* 黄金比は1：1.618
-①要素同士の余白、ボタンやカードの内側の余白など
-→左右padding：上下padding＝1：1.618
-②画像縦横比
-→縦：横＝1：1.618 */
-
-/* クラス名の概念
-wrapper→全体を包む風呂敷
-article→独立したコンテンツ（単体でも意味の通じる記事など）
-section→論理的なセクション（章、節、項などテーマの区切り）
-コンテナdiv→スタイリング用の箱（汎用的なブロック調整用）
-エリア→大まかな領域（header、nav、main、footer、asideなど）
-アイテム→具体的なコンテンツ（p、img、buttonなど最小単位） */
 
 /* 全体の設定 */
 body {
@@ -51,24 +15,24 @@ h1, h2, h3, h4, p {
 	color: #2B2721; /* テキストカラー */
 }
 h1, h2, h3, h4, ul, ol {
-	margin: 0; /*  */
+	margin: 0;
 	padding: 0;
 }
 
 /* フォントサイズの設定 */
 /* 基本スタイル（スマホ）本文16pxに対して見出し1.5倍のジャンプ率 */
 h1 {
-	font-size: clamp(1.5rem, 6.67vw, 1.625rem);/* 最小1.5×16px＝24px～推奨値ビューポート幅の6.67%～最大1.625×16px＝26pxの範囲で変化、6.67vw＝25px÷375px×100 */
+	font-size: clamp(1.5rem, 6.67vw, 1.625rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
 h2 {
-	font-size: clamp(1.25rem, 5.6vw, 1.375rem);/* 最小1.25×16px＝20px～推奨値ビューポート幅の5.6%～最大1.375×16px＝22pxの範囲で変化、5.6vw＝21px÷375px×100 */
+	font-size: clamp(1.25rem, 5.6vw, 1.375rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
 h3 {
-	font-size: clamp(1rem, 4.8vw, 1.125rem);/* 最小1×16px＝16px～推奨値ビューポート幅の4.8%～最大1.125×16px＝18pxの範囲で変化、4.8vw＝18px÷375px×100 */
+	font-size: clamp(1rem, 4.8vw, 1.125rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
@@ -77,22 +41,22 @@ h4 {
 	line-height: 1.4;
 }
 p {
-	font-size: clamp(0.875rem, 4.267vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の4.267%～最大1×16px＝16pxの範囲で変化、4.267vw＝16px÷375px×100 */
+	font-size: clamp(0.875rem, 4.267vw, 1rem);
 	letter-spacing: 0.03em;
 	line-height: 1.8;
 }
 /* タブレット（768px以上）本文16pxに対して見出し1.75倍のジャンプ率 */
 @media screen and (min-width: 768px) {
 	h1 {
-		font-size: clamp(1.75rem, 3.906vw, 2rem);/* 最小1.75×16px＝28px～推奨値ビューポート幅の3.906%～最大2×16px＝32pxの範囲で変化、3.906vw＝30px÷768px×100 */
+		font-size: clamp(1.75rem, 3.906vw, 2rem);
 		letter-spacing: 0.05em;
 	}
 	h2 {
-		font-size: clamp(1.5rem, 3.255vw, 1.625rem);/* 最小1.5×16px＝24px～推奨値ビューポート幅の3.255%～最大1.625×16px＝26pxの範囲で変化、3.255vw＝25px÷768px×100 */
+		font-size: clamp(1.5rem, 3.255vw, 1.625rem);
 		letter-spacing: 0.05em;
 	}
 	h3 {
-		font-size: clamp(1.125rem, 2.474vw, 1.25rem);/* 最小1.125×16px＝18px～推奨値ビューポート幅の2.474%～最大1.25×16px＝20pxの範囲で変化、2.474vw＝19px÷768px×100 */
+		font-size: clamp(1.125rem, 2.474vw, 1.25rem);
 		letter-spacing: 0.05em;
 	}
 	h4 {
@@ -102,40 +66,33 @@ p {
 /* PC（1025px以上）本文16pxに対して見出し2倍のジャンプ率 */
 @media screen and (min-width: 1025px) {
 	h1 {
-		font-size: clamp(1.375rem, 2.146vw, 1.6rem);/* 最小1.375×16px＝22px～推奨値ビューポート幅の2.146%～最大1.6×16px＝25.6pxの範囲で変化、2.146vw＝22px÷1025px×100 */
+		font-size: clamp(1.375rem, 2.146vw, 1.6rem);
 		letter-spacing: 0.08em;
 	}
 	h2 {
-		font-size: clamp(1.25rem, 1.951vw, 1.375rem);/* 最小1.25×16px＝20px～推奨値ビューポート幅の1.951%～最大1.375×16px＝22pxの範囲で変化、1.951vw＝20px÷1025px×100 */
+		font-size: clamp(1.25rem, 1.951vw, 1.375rem);
 		letter-spacing: 0.07em;
 	}
 	h3 {
-		font-size: clamp(1.125rem, 1.756vw, 1.25rem);/* 最小1.125×16px＝18px～推奨値ビューポート幅の1.756%～最大1.25×16px＝20pxの範囲で変化、1.756vw＝18px÷1025px×100 */
+		font-size: clamp(1.125rem, 1.756vw, 1.25rem);
 		letter-spacing: 0.06em;
 	}
 }
 
 /* 改行の設定 */
 span {
-	display: inline-block;/* レスポンシブ対応用。spanで囲った部分が画面幅いっぱいになったら自動で改行 */
+	display: inline-block;
 }
 
 .pc-span {
-	display: inline;/* デフォルト値。PC幅でinline-block、spanで囲った部分が画面幅いっぱいになったら自動で改行 */
+	display: inline;
 }
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
-/* PC（1025px以上）
-@media screen and (min-width: 1025px) { */
 	.pc-span {
-		display: inline-block;/* レスポンシブ対応用。SP幅はinline。spanで囲った部分が画面幅いっぱいになったら自動で改行 */
+		display: inline-block; /* タブレット幅以上は自動で改行 */
 	}
 }
-
-/* リンク */
-/* a {
-	text-decoration: none;
-} */
 
 /* ヘッダー */
 header {
@@ -163,7 +120,7 @@ header {
 	z-index: 3;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(139, 139, 118, 0.25);/* rgb#8B8B76暗いベージュ、薄いカーキ、a不透明度25% */
+	background-color: rgba(139, 139, 118, 0.25);
 }
 .hv-image {
 	position: absolute;
@@ -174,23 +131,21 @@ header {
 	object-position: center;
 }
 
-/* ヒーローロゴ */
-.header-logo-big {/* ヒーロービジュアルの大きいロゴ */
+/* ヒーロービジュアルの大きいロゴ */
+.header-logo-big {
 	margin: 0;
 	padding: 0;
-	position: absolute;/* sticky;fixed */
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: 4;
-	filter: drop-shadow(0px 0px 4px #2B2721); /* テキストカラー、形状に沿った影 */
+	filter: drop-shadow(0px 0px 4px #2B2721); /* テキストカラー */
 }
 .logo-image-big {
 	width: 60vw;
 	object-fit: contain;
-	/* mix-blend-mode: difference; */
-	filter: brightness(0) invert(1);/* 明るさ0反転100% */
-	/* isolation: isolate; */
+	filter: brightness(0) invert(1);
 }
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
@@ -205,22 +160,19 @@ header {
 	}
 }
 
-.header-logo {/* TOP以外の共通ヘッダーロゴ */
+/* TOP以外の共通ヘッダーロゴ */
+.header-logo {
 	margin: 0;
 	padding: 0;
-	position: fixed;/* sticky */
-	top: clamp(0.719rem, 1.268vw, 0.813rem);/* 11.5～13px、1.268vw＝13px÷1025px×100 */
-	left: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100 */
+	position: fixed;
+	top: clamp(0.719rem, 1.268vw, 0.813rem);
+	left: clamp(1.25rem, 4vw, 2rem);
 	z-index: 9997;
 }
 .logo-image {
-	/* width: 60px;
-	height: 53px; */
-	height: clamp(2.313rem, 4.098vw, 2.625rem);/* 37～42px、4.098vw＝42px÷1025px×100 */
+	height: clamp(2.313rem, 4.098vw, 2.625rem);
 	object-fit: contain;
-	/* mix-blend-mode: difference; */
-	filter: brightness(0) invert(1);/* 明るさ0反転100% */
-	/* isolation: isolate; */
+	filter: brightness(0) invert(1);
 }
 
 /* カートアイコン */
@@ -228,21 +180,14 @@ header {
 	margin: 0;
 	padding: 0;
 	position: fixed;
-	/* top: 14px;
-	right: 65px; */
-	top: clamp(0.923rem, 1.834vw, 1.175rem);/* 14.799～18.799px、1.834vw＝18.799px÷1025px×100 */
-	right: clamp(3.738rem, 9.47vw, 4.738rem);/* 24px+1.008px+20～32px+14.799～18.799px、9.47vw＝72.728px÷768px×100 */
+	top: clamp(0.923rem, 1.834vw, 1.175rem);
+	right: clamp(3.738rem, 9.47vw, 4.738rem);
 	z-index: 9996;
 }
 .cart-image {
-	/* width: 60px; */
-	height: 1.9rem;/* 30.402px */
-	/* グロナビバーの高さ60～68pxに対してアイコンの高さは30.402px、ということは上下の余白は14.799～18.799pxずつ、左右はスマホ～PCまでの左右の最低限の余白 */
+	height: 1.9rem;
 	object-fit: contain;
-	/* mix-blend-mode: exclusion;
-	opacity: 90%; */
-	filter: brightness(0) invert(1);/* 明るさ0反転100% */
-	/* isolation: isolate; */
+	filter: brightness(0) invert(1);
 }
 
 /* カートアイコン・オンラインストアリンク */
@@ -268,83 +213,75 @@ header {
 }
 
 /* ハンバーガーメニュー */
-/* .hamburger-menu {
-} */
 .menu-btn {
 	position: fixed;
-	/* top: 4px;
-	right: 15px; */
-	top: clamp(1.094rem, 2.098vw, 1.344rem);/* 17.5～21.5px、2.098vw＝21.5px÷1025px×100 */
-	right: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100 */
+	top: clamp(1.094rem, 2.098vw, 1.344rem);
+	right: clamp(1.25rem, 4vw, 2rem);
 	display: flex;
-	width: 1.563rem;/* 24px+1.008px */
-	height: 1.563rem;/* 24px+1.008px */
-	/* グロナビバーの高さ60～68pxに対してアイコンの高さは25px、ということは上下の余白は17.5～21.5pxずつ、左右はスマホ～PCまでの左右の最低限の余白 */
+	width: 1.563rem;
+	height: 1.563rem;
 	justify-content: center;
 	align-items: center;
 	z-index: 9999;
-	/* background-color: #3584bb; */
-	/* mix-blend-mode: difference; */
-	/* filter: brightness(0) invert(1);明るさ0反転100% */
 }
-.menu-btn:hover {/* マウスオーバーでカーソル変わる */
+.menu-btn:hover {
 	cursor: pointer;
 }
+/* ハンバーガーメニューの三本線 */
 .menu-btn span,
 .menu-btn span:before,
-.menu-btn span:after {/* ハンバーガーメニューの三本線 */
+.menu-btn span:after {
 	content: '';
 	display: block;
-	height: 0.0835rem;/* 1.336px */
-	width: 1.5rem;/* 24px */
-	/* border-radius: 3px; */ /* 線の角丸 */
+	height: 0.0835rem;
+	width: 1.5rem;
 	background-color: #E6E4E0; /* ベースカラー */
 	position: absolute;
 	transition: all 0.8s;
 }
 .menu-btn span:before {
-	bottom: 0.625rem; /* 10px、一番上の線 */
+	bottom: 0.625rem;
 }
 .menu-btn span:after {
-	top: 0.625rem; /* 10px、一番下の線 */
+	top: 0.625rem;
 }
 
 #menu-btn-check:checked ~ .menu-btn span {
 	background-color: rgba(255, 255, 255, 0); /*メニューオープン時は真ん中の線を透明にする*/
 }
-#menu-btn-check:checked ~ .menu-btn span::before { /* 一番上の線 */
+#menu-btn-check:checked ~ .menu-btn span::before {
 	bottom: 0;
-	width: 2.038rem;/* 32.6px、バウンディングボックスが1.5rem=24px */
+	width: 2.038rem;
 	transform: translateX(-0.269rem) rotate(45deg);
 }
-#menu-btn-check:checked ~ .menu-btn span::after { /* 一番下の線 */
+#menu-btn-check:checked ~ .menu-btn span::after {
 	top: 0;
-	width: 2.038rem;/* 32.6px、バウンディングボックスが1.5rem=24px */
+	width: 2.038rem;
 	transform: translateX(-0.269rem) rotate(-45deg);
 }
 
 #menu-btn-check {
-	display: none;/* チェックボックスは非表示 */
+	display: none;
 }
 
 /* 展開時にコンテンツに重ねる黒半透明 */
 .black-overlay {
-	position: fixed;/* 画面内で固定、absoluteだとrelativeの箱内で固定 */
-	inset: 0;/* top、left、right、bottomを一括で0、ゆえにwidthやheightの指定がなければ全画面を満たす */
-	height: 100%;/* insetがあるのでwidth: 100%;なくても全画面を満たす */
-	z-index: 9998;/* ヘッダー→黒半透明9996→ロゴ9998→ドロワーメニュー9997～9の順になるように */
-	background-color: rgba(43, 39, 33, 0.9);/* rgb#2B2721テキストカラー、a不透明度60% */
+	position: fixed;
+	inset: 0;
+	height: 100%;
+	z-index: 9998;
+	background-color: rgba(43, 39, 33, 0.9); /* テキストカラー */
 	backdrop-filter: blur(6px);
-	filter: brightness(0.8);/* 明るさ1より少し暗く */
+	filter: brightness(0.8);
 	opacity: 0;
-	pointer-events: none;/* マウスホバーやクリックを完全に無視させる */
-	transition: opacity 1s ease;/* アニメーション設定、親要素に設定、1秒かかる */
+	pointer-events: none;
+	transition: opacity 1s ease;
 }
 /* 展開時にコンテンツに重ねる黒半透明（クリック後） */
 #menu-btn-check:checked ~ .black-overlay {
 	display: block;
 	opacity: 1;
-	pointer-events: auto;/* マウスイベントを有効に戻す */
+	pointer-events: auto; /* マウスイベントを有効に戻す */
 }
 
 /* ハンバーガーメニューの内容 */
@@ -356,15 +293,13 @@ header {
 	left: 100%; /*leftの値を変更してメニューを画面外へ*/
 	z-index: 9998;
 	background-color: #446E72; /* アクセントカラー */
-	transition: all 1s; /*アニメーション設定*/
+	transition: all 1s;
 }
 .menu-content ul {
-	/* margin: 0; */
-	padding: 70px clamp(1.25rem, 4vw, 2rem) 0;/* 20～32px、4vw＝30.72px÷768px×100、スマホ～PCまでの左右の最低限の余白 */
+	padding: 70px clamp(1.25rem, 4vw, 2rem) 0;
 	width: 90%;
 }
 .menu-content ul li {
-	/* border-bottom: solid 1px #FFFFFF; */ /* 白 */
 	list-style: none;
 }
 .menu-content ul li a {
@@ -374,20 +309,18 @@ header {
 	position: relative;
 	width: 100%;
 	text-decoration: none;
-	font-size: clamp(2rem, 10.6vw, 2.5rem);/* 最小2×16px＝32px～推奨値ビューポート幅の10.6%～最大2.5×16px＝40pxの範囲で変化、10.6vw＝39.75px÷375px×100 */
+	font-size: clamp(2rem, 10.6vw, 2.5rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 	color:#E6E4E0; /* ベースカラー */
 	transition: color 0.3s;
 }
 
-/* .menu-content ul li a:link {}
-.menu-content ul li a:visited {} */
 .menu-content ul li a:hover {
-	color: #9A9488; /* 黒っぽいグレー */
+	color: #9A9488;
 }
 .menu-content ul li a:active {
-	color: #696A64; /* 暗いグレー黒いカーキ */
+	color: #696A64;
 }
 
 #menu-btn-check:checked ~ .menu-content {
@@ -400,12 +333,12 @@ header {
 		width: 90%;
 	}
 	.menu-content ul {
-		padding: 70px clamp(1.25rem, 4vw, 2rem) 0;/* 20～32px、4vw＝30.72px÷768px×100、スマホ～PCまでの左右の最低限の余白 */
+		padding: 70px clamp(1.25rem, 4vw, 2rem) 0;
 		width: 70%;
 	}
 	.menu-content ul li a {
 		padding: 1.63rem 0;
-		font-size: clamp(2.25rem, 5.5vw, 2.75rem);/* 最小2.25×16px＝36px～推奨値ビューポート幅の5.5%～最大2.75×16px＝44pxの範囲で変化、5.5vw＝42.24px÷768px×100 */
+		font-size: clamp(2.25rem, 5.5vw, 2.75rem);
 		letter-spacing: 0.05em;
 	}
 	#menu-btn-check:checked ~ .menu-content {
@@ -418,13 +351,13 @@ header {
 		width: 80%;
 	}
 	.menu-content ul {
-		padding: 70px clamp(1.25rem, 4vw, 2rem) 0;/* 20～32px、4vw＝30.72px÷768px×100、スマホ～PCまでの左右の最低限の余白 */
+		padding: 70px clamp(1.25rem, 4vw, 2rem) 0;
 		width: 60%;
 	}
 	.menu-content ul li a {
 		width: 50%;
 		padding: 9px 15px 10px 0;
-		font-size: clamp(1.25rem, 1.951vw, 1.375rem);/* 最小1.25×16px＝20px～推奨値ビューポート幅の1.951%～最大1.375×16px＝22pxの範囲で変化、1.951vw＝20px÷1025px×100 */
+		font-size: clamp(1.25rem, 1.951vw, 1.375rem);
 		letter-spacing: 0.07em;
 	}
 	#menu-btn-check:checked ~ .menu-content {
@@ -439,38 +372,34 @@ header {
 	width: 100%;
 }
 
-.header-logo-top {/* TOPページのヘッダーロゴ */
+/* TOPページのヘッダーロゴ */
+.header-logo-top {
 	margin: 0;
 	padding: 0;
-	position: sticky;/* fixed  relative absolute */
+	position: sticky;
 	top: 0;
 	left: 0;
 	z-index: 9997;
 	width: 100%;
-	/* アニメーション用の高さ */
-	height: 0px;/* ヘッダーとグロナビの間に高さを出さないように */
+	height: 0px; /* アニメーション用の高さ、ヘッダーとグロナビの間に高さを出さないように */
 }
 .logo-image-top {
 	margin: 0;
-	padding: clamp(0.719rem, 1.268vw, 0.813rem) 0 0 clamp(1.25rem, 4vw, 2rem);/* topは11.5～13px、1.268vw＝13px÷1025px×100 *//* leftは20～32px、4vw＝30.72px÷768px×100 */
+	padding: clamp(0.719rem, 1.268vw, 0.813rem) 0 0 clamp(1.25rem, 4vw, 2rem);
 	width: fit-content;
-	height: clamp(2.313rem, 4.098vw, 2.625rem);/* 37～42px、4.098vw＝42px÷1025px×100 */
-	/* グロナビバーの高さ60～68pxに合わせてロゴの高さは37～42px、ということは上下の余白は11.5～13pxずつ、左右はスマホ～PCまでの左右の最低限の余白 */
-	/* object-fit: contain;
-	mix-blend-mode: difference;
-	isolation: isolate; */
+	height: clamp(2.313rem, 4.098vw, 2.625rem);
 	opacity: 0;
-	transform: translateY(40px);/* translateX(1.315rem) translateX(0) translateY(40px) */
+	transform: translateY(40px);
 	animation-name: fadeIn;
 
 	/* スクロール連動アニメーション */
 	animation: fadeIn linear forwards;
-	animation-timeline: view(70vh);/* block 40% 30% *//* scroll() */
-	animation-range: entry 0% exit 100%;/* cover *//* 100px entry 90% contain 10% *//* exit */
+	animation-timeline: view(70vh);
+	animation-range: entry 0% exit 100%;
 }
 /* TOPロゴのフェードインアニメーション */
-@keyframes fadeIn {/* grow-progress */
-	0%, 8% {/* from */
+@keyframes fadeIn {
+	0%, 8% {
 		pointer-events: none;
 		opacity: 0;
 		filter: blur(4px);
@@ -482,7 +411,7 @@ header {
 		filter: blur(0);
 		transform: translateY(0);
 	}
-	12.01%, 100% {/* to */
+	12.01%, 100% {
 		pointer-events: auto;
 		opacity: 1;
 		filter: blur(0);
@@ -506,11 +435,11 @@ header {
 	left: 0;
 	z-index: 9993;
 	width: 100%;
-	height: clamp(3.75rem, 6.634vw, 4.25rem);/* 60～68px、6.634vw＝68px÷1025px×100 */
+	height: clamp(3.75rem, 6.634vw, 4.25rem);
 	background-color: #2B2721; /* テキストカラー */
 }
 .nav-list {
-	display: none;/* PC画面幅1025px以上でblock */
+	display: none;
 	margin: 0;
 	padding: 0;
 	text-align: center;
@@ -518,227 +447,155 @@ header {
 .nav-item {
 	display: inline-block;
 	margin: 0;
-	padding: clamp(1.438rem, 2.537vw, 1.625rem) 0.938rem clamp(1.438rem, 2.537vw, 1.625rem) 0.938rem;/* 0.625rem23px～26px、2.537vw＝26px÷1025px×100 */
+	padding: clamp(1.438rem, 2.537vw, 1.625rem) 0.938rem clamp(1.438rem, 2.537vw, 1.625rem) 0.938rem;
 	text-align: left;
-	font-size: clamp(0.875rem, 4.267vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の4.267%～最大1×16px＝16pxの範囲で変化、4.267vw＝16px÷375px×100 */
+	font-size: clamp(0.875rem, 4.267vw, 1rem);
 	line-height: 1;
-	height: clamp(0.875rem, 4.267vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の4.267%～最大1×16px＝16pxの範囲で変化、4.267vw＝16px÷375px×100; */
+	height: clamp(0.875rem, 4.267vw, 1rem);
 }
 .active {
 	position: relative;
-	/* text-decoration: line-through 0.5px;
-	color: #E6E4E0;ベースカラー */
 }
-.active::after {/* アクティブ時の取り消し線 */
+.active::after {
 	content: "";
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	z-index: 9994;
 	width: 80%;
-	height: 0.5px;
-	background-color: #E6E4E0;/* ベースカラー */
+	height: 0.5px; /* アクティブ時に取り消し線を表示 */
+	background-color: #E6E4E0; /* ベースカラー */
 	transform: translate(-50%, -50%);
 	pointer-events: none;
 }
 nav a {
 	text-decoration: none;
-	font-size: clamp(0.875rem, 4.267vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の4.267%～最大1×16px＝16pxの範囲で変化、4.267vw＝16px÷375px×100 */
+	font-size: clamp(0.875rem, 4.267vw, 1rem);
 	line-height: 1;
 	color: #E6E4E0; /* ベースカラー */
-	transition: color 0.3s;/* アニメーション設定、親要素に設定、0.3秒かかる */
+	transition: color 0.3s;
 }
-/* nav a:link {}
-nav a:visited {} */
 nav a:hover {
-	color: #9A9488; /* 黒っぽいグレー */
+	color: #9A9488;
 }
 nav a:active {
-	color: #696A64; /* 暗いグレー黒いカーキ */
+	color: #696A64;
 }
 
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	nav a {
-		/* font-size: clamp(1.125rem, 2.344vw, 1.25rem);最小1.125×16px＝18px～推奨値ビューポート幅の2.344%～最大1.25×16px＝20pxの範囲で変化、2.344vw＝18px÷768px×100 */
 		letter-spacing: 0.05em;
-		/* line-height: 1.4; */
 	}
 }
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.nav-list {
-		display: block;/* スマホ・タブレット画面幅1025px未満はnone */
+		display: block;
 	}
 	.nav-item {
-		font-size: clamp(0.875rem, 1.561vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の1.561%～最大1×16px＝16pxの範囲で変化、1.561vw＝16px÷1025px×100 */
-		height: clamp(0.875rem, 1.561vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の1.561%～最大1×16px＝16pxの範囲で変化、1.561vw＝16px÷1025px×100 */
+		font-size: clamp(0.875rem, 1.561vw, 1rem);
+		height: clamp(0.875rem, 1.561vw, 1rem);
 	}
 	nav a {
-		/* font-size: clamp(1rem, 1.561vw, 1.125rem);最小1×16px＝16px～推奨値ビューポート幅の1.756%～最大1.125×16px＝18pxの範囲で変化、1.561vw＝16px÷1025px×100 */
-		font-size: clamp(0.875rem, 1.561vw, 1rem);/* 最小0.875×16px＝14px～推奨値ビューポート幅の1.561%～最大1×16px＝16pxの範囲で変化、1.561vw＝16px÷1025px×100 */
+		font-size: clamp(0.875rem, 1.561vw, 1rem);
 	}
 }
 
 /* マルチカラム */
 .wrapper {
-	max-width: 74rem;/* 1184px、75rem1200px、コンテンツ幅の上限 */
-	/* margin: 0 auto; */
-	margin-inline: auto;/* 中央寄せ */
-	padding-inline: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100、スマホ～PCまでの左右の最低限の余白 */
+	max-width: 74rem;
+	margin-inline: auto;
+	padding-inline: clamp(1.25rem, 4vw, 2rem);
 }
 .wrapper h1 {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0 0;
-	color: #696A64;/* 暗いグレー、黒いカーキ */
+	color: #696A64;
 }
 
 /* メインエリア */
-
 /* TOP */
-/* .article-area {
-	margin: 0 10px; */
-	/* display: flex;
-	flex-wrap: wrap;
-	justify-content: space-arund; */
-	/* align-items: center; */
-	/* align-content:center;
-} */
-
 .article-area h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
-	font-size: clamp(1.5rem, 6.67vw, 1.625rem);/* 最小1.5×16px＝24px～推奨値ビューポート幅の6.67%～最大1.625×16px＝26pxの範囲で変化、6.67vw＝25px÷375px×100 */
+	font-size: clamp(1.5rem, 6.67vw, 1.625rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
 .article-area h3 {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
-	font-size: clamp(1.25rem, 5.6vw, 1.375rem);/* 最小1.25×16px＝20px～推奨値ビューポート幅の5.6%～最大1.375×16px＝22pxの範囲で変化、5.6vw＝21px÷375px×100 */
+	font-size: clamp(1.25rem, 5.6vw, 1.375rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
 .article-area h4 {
 	margin: clamp(1.25rem, 5.333vw, 1.5rem) 0;
-	/* 上下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
-	font-size: clamp(1rem, 4.8vw, 1.125rem);/* 最小1×16px＝16px～推奨値ビューポート幅の4.8%～最大1.125×16px＝18pxの範囲で変化、4.8vw＝18px÷375px×100 */
+	font-size: clamp(1rem, 4.8vw, 1.125rem);
 	letter-spacing: 0.03em;
 	line-height: 1.4;
 }
 /* タブレット（768px以上）本文16pxに対して見出し1.75倍のジャンプ率 */
 @media screen and (min-width: 768px) {
 	.article-area h2 {
-		font-size: clamp(1.75rem, 3.906vw, 2rem);/* 最小1.75×16px＝28px～推奨値ビューポート幅の3.906%～最大2×16px＝32pxの範囲で変化、3.906vw＝30px÷768px×100 */
+		font-size: clamp(1.75rem, 3.906vw, 2rem);
 		letter-spacing: 0.05em;
 	}
 	.article-area h3 {
-		font-size: clamp(1.5rem, 3.255vw, 1.625rem);/* 最小1.5×16px＝24px～推奨値ビューポート幅の3.255%～最大1.625×16px＝26pxの範囲で変化、3.255vw＝25px÷768px×100 */
+		font-size: clamp(1.5rem, 3.255vw, 1.625rem);
 		letter-spacing: 0.05em;
 	}
 	.article-area h4 {
-		font-size: clamp(1.125rem, 2.474vw, 1.25rem);/* 最小1.125×16px＝18px～推奨値ビューポート幅の2.474%～最大1.25×16px＝20pxの範囲で変化、2.474vw＝19px÷768px×100 */
+		font-size: clamp(1.125rem, 2.474vw, 1.25rem);
 		letter-spacing: 0.05em;
 	}
 }
 /* PC（1025px以上）本文16pxに対して見出し2倍のジャンプ率 */
 @media screen and (min-width: 1025px) {
 	.article-area h2 {
-		font-size: clamp(1.375rem, 2.146vw, 1.6rem);/* 最小1.375×16px＝22px～推奨値ビューポート幅の2.146%～最大1.6×16px＝25.6pxの範囲で変化、2.146vw＝22px÷1025px×100 */
+		font-size: clamp(1.375rem, 2.146vw, 1.6rem);
 		letter-spacing: 0.08em;
 	}
 	.article-area h3 {
-		font-size: clamp(1.25rem, 1.951vw, 1.375rem);/* 最小1.25×16px＝20px～推奨値ビューポート幅の1.951%～最大1.375×16px＝22pxの範囲で変化、1.951vw＝20px÷1025px×100 */
+		font-size: clamp(1.25rem, 1.951vw, 1.375rem);
 		letter-spacing: 0.07em;
 	}
 	.article-area h4 {
-		font-size: clamp(1.125rem, 1.756vw, 1.25rem);/* 最小1.125×16px＝18px～推奨値ビューポート幅の1.756%～最大1.25×16px＝20pxの範囲で変化、1.756vw＝18px÷1025px×100 */
+		font-size: clamp(1.125rem, 1.756vw, 1.25rem);
 		letter-spacing: 0.06em;
 	}
 }
 
-
-
-
-/* .top-value {
-	margin: 50px auto auto auto;
-	width: 100%;
-	height: 790px;
-} */
 .top-value-container01 {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	margin: 0 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .top-value-txt01 {
-	/* margin: auto;
-	padding: 0;
-	position:absolute;
-	top: 75px;
-	left: 25px;
-	transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう
-	z-index: 4; */
-	width: 100%;/* 500px */
-	/* background-color: rgba(250, 250, 250, 0.6);白、a不透明度60% */
-	/* backdrop-filter: blur(4px); */
-	/* 右→左グラデーション#E6E4E0ベースカラー0→100→90% */
-	/* background:linear-gradient(to left, rgba(230, 228, 224, 0) 0%,rgba(230, 228, 224, 0.9) 100%,rgba(230, 228, 224, 0.9) 90%);
-	text-shadow: 0px 0px 4px #E6E4E0;ベースカラー */
+	width: 100%;
 }
 .top-value-img01 {
-	/* margin: 0;
-	position:absolute;
-	top: 40px;
-	right: 0px;
-	transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう
-	z-index: 3; */
 	margin-inline: auto;
-	width: 80%;/* 50% */
-	max-width: 400px;/*  */
+	width: 80%;
+	max-width: 400px;
 	aspect-ratio: 2 / 3;
-	align-self: start;/* center、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: start;
 }
 .top-value-image01 {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
-	object-position: center;/*  */
+	object-fit: cover;
+	object-position: center;
 }
 
 .top-value-container02 {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .container02-box01 {
-	/* margin: 0;
-	position:relative;
-	width: 100%;
-	height: 790px; */
-	/* background-color: #BEBAB3; 薄いグレーベースより濃い */
 	width: 100%;
 }
-/* .top-value-txt02 {
-	margin: auto;
-	padding: 0;
-	position:absolute;
-	top: 75px;
-	left: 25px;
-	transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう
-	z-index: 4;
-	width: 500px; */
-	/* background-color: rgba(250, 250, 250, 0.6);白、a不透明度60% */
-	/* backdrop-filter: blur(4px); */
-	/* 右→左グラデーション#E6E4E0ベースカラー0→100→90% */
-	/* background:linear-gradient(to left, rgba(230, 228, 224, 0) 0%,rgba(230, 228, 224, 0.9) 100%,rgba(230, 228, 224, 0.9) 90%);
-	text-shadow: 0px 0px 4px #E6E4E0;ベースカラー
-} */
 .top-value-txt02 p {
 	max-width: 650px;
 }
@@ -754,209 +611,158 @@ nav a:active {
 	position:absolute;
 	top: 0;
 	left: 0;
-	/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 	z-index: 2;
 	width: 60%;
-	max-width: 300px;/*  */
+	max-width: 300px;
 	aspect-ratio: 2 / 3;
-	align-self: start;/* center、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: start;
 }
 .top-value-img03 {
 	margin: 0;
 	position:absolute;
 	top: 120px;
 	right: 0;
-	/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 	z-index: 1;
 	width: 60%;
-	max-width: 300px;/*  */
+	max-width: 300px;
 	aspect-ratio: 2 / 3;
-	align-self: start;/* center、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: start;
 }
 .top-value-image02 {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
-	object-position: center;/*  */
+	object-fit: cover;
+	object-position: center;
 }
 .top-value-image03 {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
-	object-position: center;/*  */
+	object-fit: cover;
+	object-position: center;
 }
-
 .value-button-box {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	margin: calc(clamp(2.5rem, 10.8vw, 3rem) + 15px) 0 0;
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .top-value-button01 {
-	/* margin: 0;
-	padding: 0;
-	position:absolute;
-	bottom: 65px;
-	left: 100px;
-	transform: translateX(-50%) translateY(-50%);topleftからの位置を少し戻す
-	z-index: 5; */
 	margin-inline: auto;
-	width: auto;/* 50% */
-	/* max-width: 400px; */
+	width: auto;
 	height: 46px;
 }
 .top-value-button01 a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 36px;
-	color: #FFFFFF; /* 白 */
-	/* background-color: #80AAA7; 薄いくすみグリーン */
-	background-color: #9A9488; /* 黒っぽいグレー */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #9A9488;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .top-value-button01 a:link {}
-.top-value-button01 a:visited {} */
 .top-value-button01 a:hover {
 	padding: 13px 34px;
-	color: #9A9488; /* 黒っぽいグレー */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #9A9488; /* 黒っぽいグレー */
+	color: #9A9488;
+	background-color: #FFFFFF;
+	border: 2px solid #9A9488;
 }
-/* .top-value-button01 a:active {} */
-
 .top-value-button02 {
-	/* margin: 0;
-	padding: 0;
-	position:absolute;
-	bottom: 65px;
-	left: 300px;
-	transform: translateX(-50%) translateY(-50%);topleftからの位置を少し戻す
-	z-index: 5; */
 	margin-inline: auto;
-	width: auto;/* 50% */
-	/* max-width: 400px; */
+	width: auto;
 	height: 46px;
 }
 .top-value-button02 a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 30px;
-	color: #FFFFFF; /* 白 */
-	background-color: #80AAA7; /* 薄いくすみグリーン */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #80AAA7;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .top-value-button02 a:link {}
-.top-value-button02 a:visited {} */
 .top-value-button02 a:hover {
 	padding: 13px 28px;
-	color: #80AAA7; /* 薄いくすみグリーン */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #80AAA7; /* 薄いくすみグリーン */
+	color: #80AAA7;
+	background-color: #FFFFFF;
+	border: 2px solid #80AAA7;
 }
-/* .top-value-button02 a:active {} */
-
 .button-arrow {
-	/* display: inline-block; */
 	position: relative;
-	width: 23px;/* 32px */
-	height: 8px;/* 32px */
-	/* background-color: #D5B363;ゴールド-1 */
-	flex-shrink: 0;/* 比率の固定、テキストが長くなっても画像を絶対に潰さない */
-	transition: background-color 0.3s ease;/* アニメーション設定、background-colorプロパティを0.3秒かけて変化させる、easeは変化の速度を緩やかにする */
+	width: 23px;
+	height: 8px;
+	flex-shrink: 0;
+	transition: background-color 0.3s ease; /* 0.3秒かけて変化、easeで変化の速度を緩やかに */
 }
 .button-arrow::before {
 	content: '';
 	position: absolute;
-	top: 0;/* 50% */
-	left: 0;/* 45% */
+	top: 0;
+	left: 0;
 	width: 8px;
 	height: 8px;
-	border-top: 2px solid #FFFFFF;/* ホワイト0 */
-	border-right: 2px solid #FFFFFF;/* ホワイト0 */
-	transform: translate(10px, -3px) rotate(45deg);/* translate(-50%, -50%) */
-	transition: all/* transform */ 0.3s ease;/* アニメーション設定、transformプロパティを0.3秒かけて変化させる、easeは変化の速度を緩やかにする */
+	border-top: 2px solid #FFFFFF;
+	border-right: 2px solid #FFFFFF;
+	transform: translate(10px, -3px) rotate(45deg);
+	transition: all 0.3s ease;
 }
-/* .top-value-button01 a:hover .button-arrow {
-	background-color: rgba(213, 179, 99, 0.7);rgb#D5B363ゴールド-1、a不透明度70%
-} */
 .top-value-button01 a:hover .button-arrow::before {
-	border-color: #9A9488; /* 黒っぽいグレー */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #9A9488;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
 .top-value-button02 a:hover .button-arrow::before {
-	border-color: #80AAA7; /* 薄いくすみグリーン */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #80AAA7;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
-
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	.top-value-container01 {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;/* 行の間隔40～48px、列の間隔3rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
 		margin: 0;
 	}
 	.top-value-txt01 {
-		width: calc(60% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(60% - 1.5rem);
 	}
-	/* .top-value-img01 {
-		width: calc(40% - 1.5rem);-1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅
-	} */
 	.top-value-container02 {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;/* 行の間隔40～48px、列の間隔3rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
 	}
 	.container02-box01 {
-		width: calc(60% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(60% - 1.5rem);
 	}
 	.container02-box02 {
-		width: calc(40% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(40% - 1.5rem);
 		height: 65vw;
-		/* max-height: 580px; */
 	}
 	.top-value-img01 {
 		margin: 0;
 		position:absolute;
 		top: -120px;
 		left: 50%;
-		transform: translateX(-50%) translateY(0);/* topから50%を真ん中になるよう */
+		transform: translateX(-50%) translateY(0);
 		z-index: 3;
-		/* margin-inline: auto; */
-		width: 65%;/* 50% */
-		max-width: 220px;/*  */
+		width: 65%;
+		max-width: 220px;
 	}
 	.top-value-img02 {
 		top: 160px;
 		left: 0;
-		/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 		width: 55%;
-		max-width: 200px;/*  */
+		max-width: 200px;
 	}
 	.top-value-img03 {
 		top: 280px;
 		right: 0;
-		/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 		width: 55%;
-		max-width: 200px;/*  */
+		max-width: 200px;
 	}
 	.value-button-box {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 2rem;/* 行の間隔40～48px、列の間隔2rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
-		/* margin: 0; */
-		min-width: 400px;/* auto400px70% */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 2rem;
+		min-width: 400px;
 		width: clamp(400px, 50vw, 480px);
 		max-width: 480px;
 	}
@@ -964,53 +770,40 @@ nav a:active {
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.top-value-container01 {
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.top-value-txt01 {
-		width: calc(60% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(60% - 3rem);
 	}
-	/* .top-value-img01 {
-		width: calc(60% - 3rem);-3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅
-		aspect-ratio: 2 / 3;
-	} */
 	.top-value-container02 {
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.container02-box01 {
-		width: calc(60% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(60% - 3rem);
 	}
 	.container02-box02 {
-		width: calc(40% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(40% - 3rem);
 		height: 55vw;
-		max-height: 630px;/*  */
+		max-height: 630px;
 	}
 	.top-value-img01 {
 		top: -160px;
 		left: 50%;
-		transform: translateX(-50%) translateY(0);/* topから50%を真ん中になるよう */
-		/* margin-inline: auto; */
-		width: 60%;/* 50% */
-		max-width: 240px;/*  */
+		transform: translateX(-50%) translateY(0);
+		width: 60%;
+		max-width: 240px;
 	}
 	.top-value-img02 {
 		top: 160px;
 		left: 0;
-		/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 		width: 55%;
-		max-width: 230px;/*  */
+		max-width: 230px;
 	}
 	.top-value-img03 {
 		top: 280px;
 		right: 0;
-		/* transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう */
 		width: 55%;
-		max-width: 230px;/*  */
+		max-width: 230px;
 	}
 	.value-button-box {
 		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
@@ -1019,94 +812,59 @@ nav a:active {
 	}
 }
 
-
 .top-menu {
-	/* margin: 50px auto auto auto;
-	width: 100%;
-	height: 450px; */
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
-	gap: clamp(1.25rem, 5.333vw, 1.5rem);/* clamp(2.5rem, 10.8vw, 3rem) */
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+	flex-direction: column;
+	gap: clamp(1.25rem, 5.333vw, 1.5rem);
 }
-/* .top-container02 {
-	display: flex;
-	margin: 0;
-	width: 100%;
-	height: 400px;
-} */
 .top-menu-txt {
 	width: 100%;
-	/* margin: 0;
-	padding: 0 0 0 25px;
-	width: 40%;
-	height: 400px;
-	background-color: #BEBAB3; 薄いグレーベースより濃い */
-	border-right: 1px solid transparent; /* #2B2721テキストカラー */
+	border-right: 1px solid transparent;
 }
 .top-menu-txt h3 {
 	margin-top: 0;
 }
 .top-menu-container {
-	/* margin: 0;
+	width: 100%;
 	position: relative;
-	width: 55%;
-	height: 400px;
-	margin-inline: auto; */
-	width: 100%;/* auto */
-	/* height: 98vw;
-	max-height: 580px; */
-	position: relative;
-	height: clamp(440px, 100vw, 650px);/* clamp(440px, 100vw, 650px) */
+	height: clamp(440px, 100vw, 650px);
 }
 .top-menu-slide {
-	display: grid; /* 横並びの構成 */
-	grid-auto-columns: 80%; /* 横幅占有率 */
-	grid-auto-flow: column; /* 列を順番に埋める、要素を横並びに */
-	place-items: center; /* 上下ブロック方向「中央」、左右インライン方向「」 */
-	/* padding: 0 0 0 20px; */
+	display: grid;
+	grid-auto-columns: 80%;
+	grid-auto-flow: column;
+	place-items: center;
 	gap: 20px;
-	height: auto;/* 340px */
-	overflow-x: auto; /* 要素がはみ出したらスクロールする、収まったらバーは非表示 */
-	scroll-snap-type: x mandatory; /* X軸方向のスクロールがピタッと止まる */
-	scroll-behavior: smooth; /* スクロールをスムーズに */
-	-webkit-overflow-scrolling: touch;/* iOS用スムーススクロール */
-	/* background-color: #BEBAB3; 薄いグレーベースより濃い */
+	height: auto;
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
 
-/* スクロールボタン */
+	/* スクロールボタン */
 	&::scroll-button(right) {
 		position: absolute;
 		bottom: 0;
 		left: 52px;
-		/* content: "Next→" / "Scroll Right";"⮕" */
-		/* font-family: '游明朝', serif;
-		font-size: 1rem; */
 		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M4 1 L12 8 L4 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
 	}
-
 	&::scroll-button(left) {
 		position: absolute;
 		bottom: 0;
 		left: 0;
-		/* content: "←Prev" / "Scroll Left";"⬅" */
-		/* font-family: '游明朝', serif;
-		font-size: 1rem; */
 		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12 1 L4 8 L12 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
 	}
-
-	&::scroll-button(*) {/* *はHTML上のすべての要素を指定する全称セレクタ */
+	&::scroll-button(*) {
 		width: 50px;
 		height: 50px;
-		background-color: #9A9488;/* 黒っぽいグレー、transparent */
-		/* border-radius: 50%; */
-		color: #FFFFFF; /* 白、#2B2721テキストカラー */
-		border: 2px solid #9A9488;/* 黒っぽいグレー */
-		box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+		background-color: #9A9488;
+		color: #FFFFFF;
+		border: 2px solid #9A9488;
+		box-shadow: 1px 1px 4px #9A9488;
 	}
-
 	&::scroll-button(*):hover {
-		background-color: #FFFFFF;/* 白 */
-		color: #9A9488;/* 黒っぽいグレー */
+		background-color: #FFFFFF;
+		color: #9A9488;
 	}
 	&::scroll-button(right):hover {
 		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M4 1 L12 8 L4 15" stroke="%239A9488" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
@@ -1115,232 +873,171 @@ nav a:active {
 		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12 1 L4 8 L12 15" stroke="%239A9488" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
 	}
 
-/* マーカーグループを作成する */
+	/* マーカーグループを作成する */
 	scroll-marker-group: after;
 
-/* マーカーグループのスタイルを指定する */
+	/* マーカーグループのスタイルを指定する */
 	&::scroll-marker-group {
-		display: none;/* 非表示、flexだとマーカー1個1個横並び表示 */
+		display: none;
 		justify-content: center;
 		margin-top: 10px;
 		gap: 10px;
 	}
 }
-
 .top-menu-slide::-webkit-scrollbar {
-	display: none; /* スクロールバー非表示 */
+	display: none;
 }
 
 .top-menu-img {
 	width: 100%;
-	scroll-snap-align: center; /* 要素の中央にスクロールが止まる、startend */
+	scroll-snap-align: center;
 
-/* スクロールマーカーのスタイルを指定する */
+	/* スクロールマーカーのスタイルを指定する */
 	&::scroll-marker {
 		content: "";
-		border: 1px solid #9A9488;/* 黒っぽいグレー */
+		border: 1px solid #9A9488;
 		width: 8px;
 		height: 8px;
 		border-radius: 50%;
 	}
 
-/* スクロールマーカーがビュー内にあるときのスタイルを指定する */
+	/* スクロールマーカーがビュー内にあるときのスタイルを指定する */
 	&::scroll-marker:target-current {
-		background-color: rgba(154, 148, 136, 0.4);/* #9A9488黒っぽいグレー */
+		background-color: rgba(154, 148, 136, 0.4);
 	}
 }
-
 .top-menu-image {
-	/* margin: 0;
-	width: 200px;
-	height: 200px; */
-	object-fit: cover;/* アスペクト維持、はみ出しは切り取り */
-	object-position: center;/* 画像を中央合わせに */
+	object-fit: cover;
+	object-position: center;
 	width: 100%;
-	max-width: 500px;/* 300pxclamp(440px, 118vw, 3rem) */
+	max-width: 500px;
 	aspect-ratio: 1 / 1;
 }
-/* .top-menu-caption {} */
 .top-menu-button {
 	margin: 0;
 	padding: 0;
 	position:absolute;
 	bottom: 12px;
 	right: 0;
-	/* transform: translateX(-50%) translateY(-50%);/* topleftからの位置を少し戻す */
 	z-index: 3;
 }
 .top-menu-button a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 30px;
-	color: #FFFFFF; /* 白 */
-	background-color: #80AAA7; /* 薄いくすみグリーン */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #80AAA7;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .top-menu-button a:link {}
-.top-menu-button a:visited {} */
 .top-menu-button a:hover {
 	padding: 13px 28px;
-	color: #80AAA7; /* 薄いくすみグリーン */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #80AAA7; /* 薄いくすみグリーン */
+	color: #80AAA7;
+	background-color: #FFFFFF;
+	border: 2px solid #80AAA7;
 }
-/* .top-menu-button a:active {} */
 .top-menu-button a:hover .button-arrow::before {
-	border-color: #80AAA7; /* 薄いくすみグリーン */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #80AAA7;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
-
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	.top-menu {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;/* 行の間隔40～48px、列の間隔3rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
 	}
 	.top-menu-txt {
-		width: calc(50% - 1.5rem - 3rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(50% - 1.5rem - 3rem);
 		padding-right: 3rem;
-		border-right: 1px solid #2B2721; /* transparent#2B2721テキストカラー */
+		border-right: 1px solid #2B2721; /* テキストカラー */
 	}
 	.top-menu-container {
-		width: calc(50% - 1.5rem - 1px);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* border-rightの1pxもマイナスしないと折り返してしまう */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
-		/* height: 65vw;
-		max-height: 580px; */
-		height: clamp(420px, 52vw, 520px);/* clamp(420px, 50vw, 520px) */
+		width: calc(50% - 1.5rem - 1px);
+		height: clamp(420px, 52vw, 520px);
 	}
 }
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.top-menu {
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.top-menu-txt {
-		width: calc(50% - 3rem - 6rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(50% - 3rem - 6rem);
 		padding-right: 6rem;
 	}
 	.top-menu-container {
-		width: calc(50% - 3rem - 1px);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
-		/* height: 55vw; */
-		height: clamp(500px, 48vw, 590px);/* clamp(500px, 48vw, 590px) */
+		width: calc(50% - 3rem - 1px);
+		height: clamp(500px, 48vw, 590px);
 	}
 }
 
-
-
 .top-about {
-	/* margin: 80px auto auto auto;
-	width: 100%;
-	height: 400px; */
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
-	gap: clamp(1.25rem, 5.333vw, 1.5rem);/* clamp(2.5rem, 10.8vw, 3rem) */
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+	flex-direction: column;
+	gap: clamp(1.25rem, 5.333vw, 1.5rem);
 }
 .top-about-img {
-	/* margin: 0;
-	width: 50%; */
 	margin-inline: auto;
 	width: 100%;
-	max-width: 600px;/*  */
+	max-width: 600px;
 	aspect-ratio: 1 / 1;
-	align-self: start;/* center、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: start;
 }
 .top-about-image {
-	/* margin: 0;
-	width: 100%;
-	height: 300px;
-	object-fit: contain; *//* アスペクト維持、はみ出さないよう縮小 */
-	/* object-position: bottom;画像を下合わせに */
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
-	object-position: center;/*  */
+	object-fit: cover;
+	object-position: center;
 }
 .top-about-container{
 	width: 100%;
 }
 .top-about-txt {
-	/* margin: auto;
-	padding: 0;
-	position:absolute;
-	top: 50%;
-	right: 0;
-	transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう
-	z-index: 1;
-	width: 44%; */
-	/* background-color: rgba(250, 250, 250, 0.6);白、a不透明度60% */
-	/* backdrop-filter: blur(4px); */
 	margin-bottom: clamp(3.25rem, 14vw, 4rem);
 }
 .top-about-txt h3 {
 	margin-top: clamp(1.25rem, 5.333vw, 1.5rem);
 }
-
 .top-about-button {
-	/* margin: 0;
-	padding: 0;
-	position:absolute;
-	bottom: 80px;
-	right: 25px;
-	transform: translateX(-50%) translateY(-50%);/* topleftからの位置を少し戻す
-	z-index: 3; */
-	height: 36px;/* 51px */
+	height: 36px;
 	text-align: center;
 }
 .top-about-button a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 30px;
-	color: #FFFFFF; /* 白 */
-	background-color: #80AAA7; /* 薄いくすみグリーン */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #80AAA7;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .top-about-button a:link {}
-.top-about-button a:visited {} */
 .top-about-button a:hover {
 	padding: 13px 28px;
-	color: #80AAA7; /* 薄いくすみグリーン */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #80AAA7; /* 薄いくすみグリーン */
+	color: #80AAA7;
+	background-color: #FFFFFF;
+	border: 2px solid #80AAA7;
 }
-/* .top-about-button a:active {} */
 .top-about-button a:hover .button-arrow::before {
-	border-color: #80AAA7; /* 薄いくすみグリーン */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #80AAA7;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
-
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	.top-about {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;/* 行の間隔40～48px、列の間隔3rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
 	}
 	.top-about-img {
-		width: calc(50% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(50% - 1.5rem);
 		max-width: 600px;
 		aspect-ratio: 3 / 4;
 	}
 	.top-about-container {
-		width: calc(50% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text50%、value-image50%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
-		/* height: clamp(420px, 52vw, 520px);clamp(420px, 50vw, 520px) */
+		width: calc(50% - 1.5rem);
 	}
 	.top-about-txt h3 {
 		margin-top: clamp(2.5rem, 10.8vw, 3rem);
-		/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	}
 	.top-about-button {
 		width: 90%;
@@ -1350,19 +1047,15 @@ nav a:active {
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.top-about {
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.top-about-img {
-		width: calc(60% - 3rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(60% - 3rem);
 		max-width: 680px;
 		aspect-ratio: 3 / 2;
 	}
 	.top-about-container {
-		width: calc(40% - 3rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
-		/* height: clamp(420px, 52vw, 520px);clamp(420px, 50vw, 520px) */
+		width: calc(40% - 3rem);
 	}
 	.top-about-button {
 		margin-inline: auto;
@@ -1371,95 +1064,50 @@ nav a:active {
 }
 
 .top-contact {
-	/* margin: 80px auto auto auto;
-	width: 100%;
-	height: 300px; */
 	margin-top: clamp(3.25rem, 14vw, 5rem);
 	padding-top: clamp(3.25rem, 14vw, 5rem);
 	width: 100%;
 	aspect-ratio: 2 / 3;
-	background-image: url(../image/top-contact-latte_art.jpeg);
+	background-image: url(../image/top-contact-latte_art.jpg);
 	background-position: right bottom;
 	background-size: cover;
 }
-/* .top-contact-img {
-	margin: 0;
-	width: 100%;
-	aspect-ratio: 9 / 16;
-} */
-/* .top-contact-image {
-	margin: 0;
-	width: 100%;
-	height: 300px;
-	object-fit: cover;アスペクト維持、はみ出しは切り取り */
-	/* object-position: bottom;画像を下合わせに */
-	/* display: block;img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
-	/* width: 100%;
-	height: 100%;
-	object-fit: cover;containだとアスペクト維持、はみ出さないよう縮小
-	object-position: center;
-} */
 .top-contact-container {
-	/* max-width: 74rem;1184px、75rem1200px、コンテンツ幅の上限 */
 	width: auto;
-	/* max-width: 400px; */
 	padding-top: clamp(3.25rem, 14vw, 5rem);
 	padding-bottom: clamp(3.25rem, 14vw, 5rem);
-	/* margin-inline: auto;中央寄せ */
 	margin-inline: clamp(1.25rem, 4vw, 2rem);
-	padding-inline: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100、スマホ～PCまでの左右の最低限の余白 */
-	background-color: rgba(250, 250, 250, 0.6);/* 白、a不透明度60% */
+	padding-inline: clamp(1.25rem, 4vw, 2rem);
+	background-color: rgba(250, 250, 250, 0.6);
 	backdrop-filter: blur(4px);
 }
 .top-contact-txt {
-	/* margin: auto 0 auto 50px;
-	padding: 0 0 0 80px;
-	position:absolute;
-	top: 50%;
-	left: 0;
-	transform: translateX(0) translateY(-50%);topから50%を真ん中になるよう
-	z-index: 1;
-	width: 35%;
-	height: 210px; */
-	/* background-color: rgba(250, 250, 250, 0.6);白、a不透明度60%
-	backdrop-filter: blur(4px); */
 	margin-bottom: clamp(3.25rem, 14vw, 4rem);
 }
 .top-contact-txt h2 {
 	margin-top: 0;
 }
-
 .top-contact-button {
-	/* margin: 0;
-	padding: 0;
-	position:absolute;
-	bottom: 80px;
-	left: 220px; */
-	/* transform: translateX(-50%) translateY(-50%);topleftからの位置を少し戻す */
-	/* z-index: 3; */
-	height: 36px;/* 51px */
+	height: 36px;
 	text-align: center;
 }
 .top-contact-button a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 30px;
-	color: #FFFFFF; /* 白 */
-	background-color: #9A9488; /* 黒っぽいグレー */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #9A9488;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .top-contact-button a:link {}
-.top-contact-button a:visited {} */
 .top-contact-button a:hover {
 	padding: 13px 28px;
-	color: #9A9488; /* 黒っぽいグレー */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #9A9488; /* 黒っぽいグレー */
+	color: #9A9488;
+	background-color: #FFFFFF;
+	border: 2px solid #9A9488;
 }
-/* .top-contact-button a:active {} */
 .top-contact-button a:hover .button-arrow::before {
-	border-color: #9A9488; /* 黒っぽいグレー */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #9A9488;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
 @media screen and (min-width: 450px) {
 	.top-contact {
@@ -1471,14 +1119,11 @@ nav a:active {
 	.top-contact {
 		aspect-ratio: 4 / 3;
 	}
-	/* .top-contact-container {
-		width: 50vw;600pxclamp(3.25rem, 14vw, 4rem)
-	} */
 	.top-contact-img {
 		aspect-ratio: 16 / 9;
 	}
 	.top-contact-image {
-		object-position: bottom;/* center */
+		object-position: bottom;
 	}
 	.top-contact-txt {
 		width: 90%;
@@ -1496,43 +1141,32 @@ nav a:active {
 		aspect-ratio: 16 / 9;
 	}
 	.top-contact-container {
-		max-width: calc(100vw - 2rem - 2rem - 2rem - 2rem);/* margin-inline:2remとpadding-inline:2remをマイナス */
+		max-width: calc(100vw - 2rem - 2rem - 2rem - 2rem);
 		width: auto;
-		margin-inline: auto;/* 中央寄せ */
-		/* width: 50vw;
-		max-width: auto; */
+		margin-inline: auto;
 	}
 	.top-contact-txt {
 		max-width: 850px;
 	}
 	.top-contact-button {
-		/* margin-inline: auto;
-		text-align: left; */
 		max-width: 850px;
-		
 	}
 }
-@media screen and (min-width: 1248px) {/* 74rem1184px + 2rem32px + 2rem32px */
+@media screen and (min-width: 1248px) {
 	.top-contact-container {
-		max-width: calc(74rem - 2rem - 2rem);/* 1184px、75rem1200px、コンテンツ幅の上限 */
+		max-width: calc(74rem - 2rem - 2rem);
 		width: auto;
-		margin-inline: auto;/* 中央寄せ */
-		/* position: relative; */
+		margin-inline: auto;
 	}
 	.top-contact-txt {
 		width: 850px;
 	}
 	.top-contact-button {
-		/* position: absolute;
-		top: 240px;50%
-		right: 200px; */
-		/* transform: translateY(-50%); */
 		width: 850px;
 	}
 }
 @media screen and (min-width: 1440px) {
 	.top-contact {
-		/* aspect-ratio: auto; */
 		max-height: 810px;
 	}
 }
@@ -1545,37 +1179,28 @@ nav a:active {
 }
 .article-value h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .article-value h3 {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 }
 .article-value h4 {
 	margin: clamp(1.25rem, 5.333vw, 1.5rem) 0;
-	/* 上下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 }
 .value-area {
 	padding: 0 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	border-bottom: 1px solid #2B2721; /* テキストカラー */
 }
 .value-area h3 {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0;
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .value-border-top {
 	padding: clamp(2.5rem, 10.8vw, 3rem) 0 0;
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	border-top: 1px solid #2B2721; /* テキストカラー */
 }
 .value-container {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	margin: 0;
 	padding: 0;
 }
@@ -1585,13 +1210,13 @@ nav a:active {
 .value-image {
 	width: 100%;
 	aspect-ratio: 4 / 3;
-	align-self: center;/* start、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: center;
 }
 .value-photo {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
+	object-fit: cover;
 	object-position: center;
 }
 .sp-display {
@@ -1603,18 +1228,15 @@ nav a:active {
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	.value-container {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;/* 行の間隔20～24px、列の間隔3rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 3rem;
 	}
 	.value-text {
-		width: calc(60% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(60% - 1.5rem);
 	}
 	.value-image {
-		width: calc(40% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text60%、value-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(40% - 1.5rem);
 	}
 	.sp-display {
 		display: none;
@@ -1626,26 +1248,17 @@ nav a:active {
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.value-container {
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.value-text {
-		width: calc(48% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text48%、value-image52%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(48% - 3rem);
 	}
 	.value-image {
-		width: calc(52% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（value-text48%、value-image52%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(52% - 3rem);
 		aspect-ratio: 3 / 2;
 	}
 }
 
-/* .origin-area {
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-arund;
-} */
 .origin-lead {
 	position:relative;
 	width: 100%;
@@ -1660,7 +1273,7 @@ nav a:active {
 	transform: translateX(0) translateY(0);
 	z-index: 1;
 	width: 70%;
-	background-color: rgba(250, 250, 250, 0.6);/* 白、a不透明度60% */
+	background-color: rgba(250, 250, 250, 0.6);
 	backdrop-filter: blur(4px);
 }
 .origin-lead-img {
@@ -1672,10 +1285,10 @@ nav a:active {
 	aspect-ratio: 4 / 3;
 }
 .origin-lead-photo {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
+	object-fit: cover;
 	object-position: center;
 }
 /* タブレット（768px以上） */
@@ -1700,7 +1313,7 @@ nav a:active {
 		padding: clamp(1.25rem, 5.333vw, 1.5rem) 50px;
 		top: 50%;
 		left: 0;
-		transform: translateX(0) translateY(-50%);/* topから50%を真ん中になるよう */
+		transform: translateX(0) translateY(-50%);
 		width: 50%;
 	}
 	.origin-lead-img {
@@ -1712,28 +1325,22 @@ nav a:active {
 .origin-container {
 	display: flex;
 	width: 100%;
-	overflow-x: scroll; /* 横スクロール */
+	overflow-x: scroll;
 }
 .origin-card {
 	margin: 5px;
 	padding: 0 30px;
 	width: 70%;
-	background-color: rgba(190, 186, 179, 0.6); /* #BEBAB3薄いグレーベースより濃い */
-	flex-shrink: 0; /* アイテムの縮小度合、横スクロールなのでなし */
+	background-color: rgba(190, 186, 179, 0.6);
+	flex-shrink: 0;
 }
-/* .origin-card h4 {
-	margin: clamp(1.25rem, 5.333vw, 1.5rem) 0 0;
-	上：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100
-} */
 .origin-card p {
 	margin-bottom: clamp(2.5rem, 10.8vw, 3rem);
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .origin-content {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 	margin: 0;
 	padding: 0;
 }
@@ -1743,26 +1350,25 @@ nav a:active {
 .origin-image {
 	width: 100%;
 	aspect-ratio: 4 / 3;
-	align-self: center;/* start、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: center;
 }
 .origin-photo {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
-	height: 100%;/*  */
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
+	height: 100%;
+	object-fit: cover;
 	object-position: center;
 }
-
 .origin-container::-webkit-scrollbar {
-	height: 8px; /* スクロールバーの高さ8px */
+	height: 8px;
 }
 .origin-container::-webkit-scrollbar-thumb {
-	background-color: #9A9488; /* ツマミ（動かすところ）の色、黒っぽいグレー */
-	border-radius: 4px; /* ツマミ両端の丸み7px */
+	background-color: #9A9488;
+	border-radius: 4px;
 }
 .origin-container::-webkit-scrollbar-track {
-	background-color: #BEBAB3; /* トラック（バーの背景）の色、薄いグレーベースより濃い */
-	border-radius: 4px; /* トラック両端の丸み7px */
+	background-color: #BEBAB3;
+	border-radius: 4px;
 }
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
@@ -1772,72 +1378,55 @@ nav a:active {
 	}
 	.origin-card h4 {
 		margin: clamp(1.25rem, 5.333vw, 1.5rem) 0 0;
-		/* 上：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 	}
 	.origin-content {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(1.25rem, 5.333vw, 1.5rem) 3rem;/* 行の間隔20～24px、列の間隔3rem */
-		/* 上下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(1.25rem, 5.333vw, 1.5rem) 3rem;
 	}
 	.origin-text {
-		width: calc(60% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（origin-text60%、origin-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(60% - 1.5rem);
 	}
 	.origin-image {
-		width: calc(40% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（origin-text60%、origin-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(40% - 1.5rem);
 	}
 	.origin-photo {
 		margin-bottom: clamp(2.5rem, 10.8vw, 3rem);
-		/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	}
 }
-/* PC（1025px以上）
-@media screen and (min-width: 1025px) {} */
 
-/* .flavor-area {
-	margin: 50px auto auto;
-	width: 95%;
-} */
 .flavor-area h3 {
 	margin: 0;
 }
 .flavor-area-p {
 	margin: 0 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 	width: 100%;
 }
 /* アコーディオン設定 */
 details {
-/* アコーディオンの中身のスタイル */
 	padding-top: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	color: #2B2721; /* テキストカラー */
 	border-bottom: 1px solid #2B2721; /* テキストカラー */;
-	background-color: rgba(139, 139, 118, 0.4); /* #8B8B76暗いベージュ薄いカーキ */
+	background-color: rgba(139, 139, 118, 0.4);
+
+	/* アコーディオンの中身のスタイル */
 	&::details-content {
-		margin: 0 30px 0;/* 0 30px 20px */
+		margin: 0 30px 0;
 		padding-bottom: clamp(2.5rem, 10.8vw, 3rem);
-		/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 		transition:height 1s,
 			opacity 1s,
-			content-visibility 1s allow-discrete;/* アニメーションさせたい秒数 */
+			content-visibility 1s allow-discrete;
 		height: 0;
 		opacity: 0;
-		overflow: clip;/* あふれたコンテンツ切り取る、スクロールコンテナではない */
-		/* background-color: #FFFFFF; 白 */
+		overflow: clip;
 	}
-/* アコーディオンの中身のスタイル（開いている時） */
+	/* アコーディオンの中身のスタイル（開いている時） */
 	&[open]::details-content {
 		opacity: 1;
 	}
-/* アコーディオンが開いた時のスタイル */
-	/* &[open] summary {
-		background-color: #FFFFFF; 白
-	} */
+	/* アコーディオンが開いた時のスタイル */
 	&[open] .accordion-icon {
-		transform: rotate(-45deg);/* 135 - 180度回転 */
+		transform: rotate(-45deg);
 	}
 }
 /* height:0（数値型）→auto（文字型）のアニメーションを可能にするための指定 */
@@ -1856,22 +1445,18 @@ details {
 		overflow-y: scroll;
 	}
 }
-
 summary {
-	list-style-type: none;/* デフォルトの三角形アイコンを消す、display: list-item;以外のblockとかでも可 */
-	display: grid;/* これだけでもdisplay: list-item;以外なので三角形アイコン消える */
-	grid-template-columns: 1fr 24px;/* 列幅余った1トラック幅全部と24px */
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: 1fr 24px;
 	gap: 6px;
 	align-items: center;
-	padding: 0 30px;/* 20px 24px 0 */
-	/* background-color: #8B8B76; 暗いベージュ薄いカーキ、#80AAA7薄いくすみグリーン */
-	/* border-bottom: 1px solid #2B2721; テキストカラー */;
+	padding: 0 30px;
 }
 summary h3 {
 	width: 230px;
 }
 .accordion-icon {
-	/* content: ""; */
 	width: 15px;
 	height: 15px;
 	border-top: solid 3px #2B2721; /* テキストカラー */
@@ -1879,35 +1464,37 @@ summary h3 {
 	transform: translateY(-20%) rotate(135deg);
 	transition: transform 0.8s;
 }
-summary:hover {/* マウスオーバーでカーソル変わる */
+summary:hover {
 	cursor: pointer;
 }
-
-.table-container {/* 影の疑似要素追加用 */
+/* テーブル */
+.table-container {
 	position: relative;
 	width: 100%;
 }
-.table-container::after {/* 影の疑似要素追加用 */
+.table-container::after {
 	content: "";
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 20px;
 	height: 100%;
-	background: linear-gradient(to right, transparent, rgba(139, 139, 118, 0.2));/* #8B8B76暗いベージュ薄いカーキ */
+	background: linear-gradient(to right, transparent, rgba(139, 139, 118, 0.2));
 	pointer-events: none;
 }
-.table-scroll {/* 横スクロール用 */
+.table-scroll {
 	width: 100%;
-	overflow-x: auto;/* tableに直接指定しても挙動しない */
+	height: auto;
+	overflow-x: auto;
+	overflow-y: visible;
 	-webkit-overflow-scrolling: touch;
 }
-.flavor-list {/* テーブル */
+.flavor-list {
 	width: 100%;
-	min-width: 670px;/* テーブルの最小幅を確保 */
+	min-width: 670px;
 }
 .flavor-list th, .flavor-list td {
-	white-space: nowrap; /* セル内での意図しない改行を防ぐ */
+	white-space: nowrap;
 }
 .flavor-list thead th {
 	text-align: center;
@@ -1916,7 +1503,6 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	background-color: #2B2721; /* テキストカラー */
 }
 .flavor-list td {
-	/* width: 200px; */
 	padding: 1em 24px;
 	color: #2B2721; /* テキストカラー */
 	background-color: #E6E4E0; /* ベースカラー */
@@ -1927,7 +1513,7 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 		width: 80%;
 	}
 	details {
-	/* アコーディオンの中身のスタイル */
+		/* アコーディオンの中身のスタイル */
 		&::details-content {
 		margin: 0 50px;
 		}
@@ -1946,10 +1532,6 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	}
 }
 
-/* .athome-area {
-	margin: 50px auto auto;
-	width: 95%;
-} */
 .athome-container {
 	position:relative;
 	width: 100%;
@@ -1964,7 +1546,7 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	padding: 0 30px;
 	width: 75%;
 	height: 520px;
-	background-color: #FFFFFF; /* 白 */
+	background-color: #FFFFFF;
 }
 .athome-text p {
 	width: 100%;
@@ -1974,62 +1556,57 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	bottom: 0;
 	right: 0;
 	z-index: 2;
-	width: clamp(310px, 80vw, 480px);/* 90%clamp(310px, 90vw, 480px) */
-	/* max-width: 550px; */
+	width: clamp(310px, 80vw, 480px);
 	aspect-ratio: 4 / 3;
 }
 .athome-photo {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
+	object-fit: cover;
 	object-position: center;
 }
 .athome-button {
 	margin: 0;
 	padding: 0;
 	position:absolute;
-	top: 50%;/* clamp(345px, 50vw, ) */
+	top: 50%;
 	left: 30px;
-	/* transform: translateX(-50%) translateY(0);topleftからの位置を少し戻す */
 	z-index: 3;
 }
 @media screen and (min-width: 455px) {
 	.athome-button {
-		top: 45%;/* clamp(345px, 50vw, ) */
+		top: 45%;
 	}
 }
 @media screen and (min-width: 482px) {
 	.athome-button {
-		top: 40%;/* clamp(345px, 50vw, ) */
+		top: 40%;
 	}
 }
 @media screen and (min-width: 689px) {
 	.athome-button {
-		top: 35%;/* clamp(345px, 50vw, ) */
+		top: 35%;
 	}
 }
 .athome-button a {
 	text-decoration: none;
 	margin: 0;
 	padding: 15px 30px;
-	color: #FFFFFF; /* 白 */
-	background-color: #80AAA7; /* 薄いくすみグリーン */
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	color: #FFFFFF;
+	background-color: #80AAA7;
+	box-shadow: 1px 1px 4px #9A9488;
 }
-/* .athome-button a:link {}
-.athome-button a:visited {} */
 .athome-button a:hover {
 	padding: 13px 28px;
-	color: #80AAA7; /* 薄いくすみグリーン */
-	background-color: #FFFFFF; /* 白 */
-	border: 2px solid #80AAA7; /* 薄いくすみグリーン */
+	color: #80AAA7;
+	background-color: #FFFFFF;
+	border: 2px solid #80AAA7;
 }
 .athome-button a:hover .button-arrow::before {
-	border-color: #80AAA7; /* 薄いくすみグリーン */
-	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px);/* 矢印を少し右上に動かす */
+	border-color: #80AAA7;
+	transform: translate(10px, -3px) rotate(45deg) translate(2px, -2px); /* 矢印を少し右上に動かす */
 }
-/* .athome-button a:active {} */
 /* タブレット（768px以上） */
 @media screen and (min-width: 768px) {
 	.athome-container {
@@ -2044,13 +1621,11 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 		width: 500px;
 	}
 	.athome-image {
-		width: 52vw;/* 56%clamp(385px, 50vw, 530px) */
-		/* max-width: 600px; */
+		width: 52vw;
 	}
 	.athome-button {
 		top: 50%;
 		left: 50px;
-		/* transform: translateX(0) translateY(0);topleftからの位置を少し戻す */
 	}
 }
 /* PC（1025px以上） */
@@ -2068,22 +1643,19 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	}
 	.athome-image {
 		width: clamp(560px, 50vw, 600px);
-		/* max-width: clamp(580px, 50vw, 600px);600px */
 		aspect-ratio: 3 / 2;
 	}
 	.athome-button {
 		top: 56%;
-		left: clamp(50px, 26vw, 100px);/* 50px26% */
-		/* transform: translateX(-20%) translateY(-55%);topleftからの位置を少し戻す */
+		left: clamp(50px, 26vw, 100px);
 	}
 }
 
 /* MENU */
 .article-menu {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(3.25rem, 14vw, 5rem);
-	/* 上下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	margin: 0;
 	padding: 0;
 }
@@ -2093,100 +1665,97 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 }
 .menu-area h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
-/* .menulist {
+.menulist {
 	width: 100%;
-} */
+	max-width: 450px;
+}
 .menulist:nth-of-type(2) {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0 0;
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .menulist thead th {
 	text-align: left;
-	height: 1.875rem;/* 1.875rem30px */
+	height: 1.875rem;
 	color: #2B2721; /* テキストカラー */
 }
 .menulist tbody th {
-	writing-mode: sideways-lr;/* 下から垂直方向に横書き */
+	writing-mode: sideways-lr;
 	text-align: right;
-	color: #9A9488; /* 黒っぽいグレー、#8B8B76暗いベージュ */
-	border-right: 1px solid #9A9488; /* 黒っぽいグレー、#8B8B76暗いベージュ */
-	width: 6.75%;
+	color: #9A9488;
+	border-right: 1px solid #9A9488;
+	width: 4%;
+	max-width: 30px;
 }
 .menulist td {
-	padding-left: 1em;/* 親要素の影響を受ける、ネストで掛け算式に大きくなる */
 	color: #2B2721; /* テキストカラー */
 }
-.menulist td:nth-of-type(1) {/* td:nth-child(1)nth-of-type */
-	width: 51.63%;/* 220px */
+.menulist td:nth-of-type(1) {
+	padding-left: 1rem;
+	width: auto;
+	max-width: 330px;
 }
 .menulist td:nth-of-type(2) {
-	width: 19.31%;/* 80px */
-	text-align: center;/* テキスト中央寄せ、right右寄せ */
+	padding-right: 0.3rem;
+	width: 20%;
+	max-width: 90px;
+	text-align: right;
 }
-/* .dashed-leader {リーダー線、非表示
-	width: 100px; */
-	/* border-bottom: 1px dashed #9A9488;黒っぽいグレー
-} */
-
 .menu-image-area {
 	position: relative;
 	margin: 0 0 clamp(3.25rem, 14vw, 5rem);
-	/* 下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	width: 100%;
 	max-height: 820px;
 }
 .menu-box {
-	display: grid;/* 横並びの構成 */
-	grid-auto-columns: 100%;/* 横幅占有率 */
-	grid-auto-flow: column;/* 列を順番に埋める、要素を横並びに */
-	place-items: center;/* 上下ブロック方向「中央」、左右インライン方向「」 */
+	display: grid;
+	grid-auto-columns: 100%;
+	grid-auto-flow: column;
+	place-items: center;
 	margin: 0;
 	padding: 0;
-	overflow-x: auto;/* 要素がはみ出したらスクロールする、収まったらバーは非表示 */
-	scroll-snap-type: x mandatory;/* X軸方向のスクロールがピタッと止まる */
-	scroll-snap-stop: always;/* 1枚1枚スナップする */
-	scroll-behavior: smooth;/* スクロールをスムーズに */
-	-webkit-overflow-scrolling: touch;/* iOS用スムーススクロール */
+	width: 100%;
+	height: auto;
+	overflow-x: auto;
+	overflow-y: visible;
+	scroll-snap-type: x mandatory;
+	scroll-snap-stop: always;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
 	
 	/* スクロールボタン */
-	&::scroll-button(*) {/* *はHTML上のすべての要素を指定する全称セレクタ */
+	&::scroll-button(*) {
 		display: flex;
-		justify-content: center;/* 左右中央揃え */
-		align-items: center;/* 上下中央揃え */
+		justify-content: center;
+		align-items: center;
 		position: absolute;
-		top: 50%;/* calc(50% - 1rem - 20px)50% - 下margin2remの半分 */
-		transform: translate(0, -50%);/* rotate(45deg) */
+		top: 50%;
+		transform: translate(0, -50%);
 		z-index: 3;
-		width: 32px;/* 40px */
-		height: 32px;/* 40px */
+		width: 32px;
+		height: 32px;
 		border: none;
-		background-color: rgba(68, 110, 114, 0.4);/* rgb#446E72アクセントカラー、a不透明度40% */
+		background-color: rgba(68, 110, 114, 0.4); /* アクセントカラー */
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 	}
 	&::scroll-button(*):hover {
-		background-color: rgba(68, 110, 114, 0.7);/* rgb#446E72アクセントカラー、a不透明度70% */
+		background-color: rgba(68, 110, 114, 0.7); /* アクセントカラー */
 	}
 	&::scroll-button(right) {
 		right: clamp(1rem, 4.267vw, 1.25rem);
-		/* 右：最小16px～推奨値ビューポート幅の4.267%～最大20pxの範囲、4.267vw＝16px÷375px×100 */
-		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M4 1 L12 8 L4 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');/*  */
+		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M4 1 L12 8 L4 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
 		}
 	&::scroll-button(left) {
 		left: clamp(1rem, 4.267vw, 1.25rem);
-		/* 左：最小16px～推奨値ビューポート幅の4.267%～最大20pxの範囲、4.267vw＝16px÷375px×100 */
-		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12 1 L4 8 L12 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');/*  */
+		content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path d="M12 1 L4 8 L12 15" stroke="%23FFFFFF" stroke-width="2" fill="none" stroke-linecap="square"/></svg>');
 	}
 	
 	/* マーカーグループを作成する */
 	scroll-marker-group: after;
 	/* マーカーグループのスタイルを指定する */
 	&::scroll-marker-group {
-		display: flex;/* none非表示、flexだとマーカー1個1個横並び表示 */
-		justify-content: center;/* 左右中央揃え */
+		display: flex;
+		justify-content: center;
 		position: absolute;
 		bottom: 0;
 		left: 50%;
@@ -2194,23 +1763,23 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 		gap: 10px;
 		width: 100%;
 		max-width: 100vw;
-		overflow-x: auto;/* 横方向にはみ出た分をスクロール可能に */
-		white-space: nowrap;/* 改行を防ぐ */
-		scrollbar-width: none;/* スクロールバーを見えなくする（オプション） */
-		-webkit-overflow-scrolling: touch;/* iOS用スムーススクロール */
+		overflow-x: auto;
+		white-space: nowrap;
+		scrollbar-width: none;
+		-webkit-overflow-scrolling: touch;
 	}
 }
 .menu-box::-webkit-scrollbar {
-	display: none;/* スクロールバー非表示 */
+	display: none;
 }
 .menu-box::scroll-marker-group::-webkit-scrollbar {
-	display: none;/* スクロールバー非表示 */
+	display: none;
 }
 .menu-slide {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	scroll-snap-align: center;/* コンテンツの中央位置でスナップする */
+	scroll-snap-align: center;
 
 		/* 個々のマーカー */
 		&::scroll-marker {
@@ -2219,16 +1788,16 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 			width: 10px;
 			height: 10px;
 			border-radius: 50%;
-			background-color: rgba(105, 106, 100, 0.2);/* rgb#696A64暗いグレー黒いカーキ、a不透明度20% */
+			background-color: rgba(105, 106, 100, 0.2);
 			cursor: pointer;
 			transition: all 0.2s ease;
 		}
 		&::scroll-marker:target-current {
-			background-color: rgba(105, 106, 100, 0.7);/* rgb#696A64暗いグレー黒いカーキ、a不透明度70% */
+			background-color: rgba(105, 106, 100, 0.7);
 		}
 }
 .menu-image01 {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて3:4に誤差が出るかも */
+	display: block;
 	width: 100%;
 	max-width: 600px;
 	aspect-ratio: 3 / 4;
@@ -2237,33 +1806,30 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 }
 .menu-caption {
 	position: absolute;
-	bottom: clamp(3rem, 12.8vw, 3.25rem);/* 48～52px */
-	/* 下：最小48px～推奨値ビューポート幅の12.8%～最大52pxの範囲、12.8vw＝48px÷375px×100 */
+	bottom: clamp(3rem, 12.8vw, 3.25rem);
 	left: 50%;
 	z-index: 1;
 	transform: translate(-50%, 0);
-	text-shadow: 0 1px 4px rgba(43, 39, 33, 0.6), 0 0 12px rgba(43, 39, 33, 0.4);/* rgb#2B2721テキストカラー、a不透明度60%40% */
-	/* font-size: clamp(1rem, 2vw, 1.5rem);
-	width: 240px;100% */
-	text-align: center;/* right */
-	color: #FFFFFF; /* 白 */
+	text-shadow: 0 1px 4px rgba(43, 39, 33, 0.6), 0 0 12px rgba(43, 39, 33, 0.4); /* テキストカラー */
+	text-align: center;
+	color: #FFFFFF;
 }
 /* 【重要】マウス操作のPC環境で、ウィンドウを狭めてこの幅になった時だけスクロールバーを復活させる */
 @media (pointer: fine) {
 	.menu-box::scroll-marker-group {
-		scrollbar-width: auto; /* スクロールバーを表示 */
+		scrollbar-width: auto;
 	}
 	.menu-box::scroll-marker-group::-webkit-scrollbar {
-		display: block;/* スクロールバー再表示 */
-		height: 8px; /* スクロールバーの高さ8px */
+		display: block; /* スクロールバー再表示 */
+		height: 8px;
 	}
 	.menu-box::scroll-marker-group::-webkit-scrollbar-thumb {
-		background-color: #9A9488; /* ツマミ（動かすところ）の色、黒っぽいグレー */
-		border-radius: 4px; /* ツマミ両端の丸み7px */
+		background-color: #9A9488;
+		border-radius: 4px;
 	}
 	.menu-box::scroll-marker-group::-webkit-scrollbar-track {
-		background-color: #BEBAB3; /* トラック（バーの背景）の色、薄いグレーベースより濃い */
-		border-radius: 4px; /* トラック両端の丸み7px */
+		background-color: #BEBAB3;
+		border-radius: 4px;
 	}
 }
 /* タブレット（768px以上） */
@@ -2271,7 +1837,6 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	.menu-image-area {
 		max-width: 600px;
 		margin: 0 0 calc(clamp(3.25rem, 14vw, 5rem) + 80px);
-		/* 下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	}
 	.menu-box {
 		&::scroll-marker-group {
@@ -2284,69 +1849,69 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 		&::scroll-marker {
 			width: 80px;
 			height: 80px;
-			flex-shrink: 0;/* 親要素が狭くなっても、絶対に横幅（80px）を縮ませない */
-			border-radius: 4px;/* 丸から「角丸の四角」に変更 */
-			border: 2px solid rgba(128, 170, 167, 0.6);/* rgb#80AAA7薄いくすみグリーン、transparent */
+			flex-shrink: 0;
+			border-radius: 4px;
+			border: 2px solid rgba(128, 170, 167, 0.6);
 			opacity: 0.6;
 			background-size: cover;
 			background-position: center;
-			background-color: #FFFFFF;/* 白、読み込み前のフォールバック色 */
+			background-color: #FFFFFF;
 		}
 		&::scroll-marker:target-current {
-			border-color: #80AAA7;/* #80AAA7薄いくすみグリーン、枠線をつける */
-			opacity: 1;/* くっきり表示 */
+			border-color: #80AAA7;
+			opacity: 1;
 		}
 	}
 	.menu-box *:nth-child(1)::scroll-marker {
-		background-image: url(../image/menu-drip-hot-blend.jpeg);
+		background-image: url(../image/menu-drip-hot-blend.jpg);
 	}
 	.menu-box *:nth-child(2)::scroll-marker {
-		background-image: url(../image/menu-drip-hot-single_origine.jpeg);
+		background-image: url(../image/menu-drip-hot-single_origine.jpg);
 	}
 	.menu-box *:nth-child(3)::scroll-marker {
-		background-image: url(../image/menu-drip-hot-americano.jpeg);
+		background-image: url(../image/menu-drip-hot-americano.jpg);
 	}
 	.menu-box *:nth-child(4)::scroll-marker {
-		background-image: url(../image/menu-drip-iced-blend.jpeg);
+		background-image: url(../image/menu-drip-iced-blend.jpg);
 	}
 	.menu-box *:nth-child(5)::scroll-marker {
-		background-image: url(../image/menu-espresso-hot-espresso.jpeg);
+		background-image: url(../image/menu-espresso-hot-espresso.jpg);
 	}
 	.menu-box *:nth-child(6)::scroll-marker {
-		background-image: url(../image/menu-espresso-hot-americano.jpeg);
+		background-image: url(../image/menu-espresso-hot-americano.jpg);
 	}
 	.menu-box *:nth-child(7)::scroll-marker {
-		background-image: url(../image/menu-espresso-hot-cappuccino.jpeg);
+		background-image: url(../image/menu-espresso-hot-cappuccino.jpg);
 	}
 	.menu-box *:nth-child(8)::scroll-marker {
-		background-image: url(../image/menu-espresso-hot-cafe_latte.jpeg);
+		background-image: url(../image/menu-espresso-hot-cafe_latte.jpg);
 	}
 	.menu-box *:nth-child(9)::scroll-marker {
-		background-image: url(../image/menu-espresso-hot-cafe_mocha.jpeg);
+		background-image: url(../image/menu-espresso-hot-cafe_mocha.jpg);
 	}
 	.menu-box *:nth-child(10)::scroll-marker {
-		background-image: url(../image/menu-espresso-iced-americano.jpeg);
+		background-image: url(../image/menu-espresso-iced-americano.jpg);
 	}
 	.menu-box *:nth-child(11)::scroll-marker {
-		background-image: url(../image/menu-espresso-iced-cafe_latte.jpeg);
+		background-image: url(../image/menu-espresso-iced-cafe_latte.jpg);
 	}
 	.menu-box *:nth-child(12)::scroll-marker {
-		background-image: url(../image/menu-espresso-iced-cafe_mocha.jpeg);
+		background-image: url(../image/menu-espresso-iced-cafe_mocha.jpg);
 	}
 	.menu-box *:nth-child(13)::scroll-marker {
-		background-image: url(../image/menu-espresso-iced-espresso_tonic.jpeg);
+		background-image: url(../image/menu-espresso-iced-espresso_tonic.jpg);
 	}
 	.menu-box *:nth-child(14)::scroll-marker {
-		background-image: url(../image/menu-sweets-seasonal-lemon_tart.jpeg);
+		background-image: url(../image/menu-sweets-seasonal-lemon_tart.jpg);
 	}
 	.menu-box *:nth-child(15)::scroll-marker {
-		background-image: url(../image/menu-sweets-affogato.jpeg);
+		background-image: url(../image/menu-sweets-affogato.jpg);
 	}
 	.menu-box *:nth-child(16)::scroll-marker {
-		background-image: url(../image/menu-sweets-coffee_jelly.jpeg);
+		background-image: url(../image/menu-sweets-coffee_jelly.jpg);
 	}
 	.menu-box *:nth-child(17)::scroll-marker {
-		background-image: url(../image/menu-sweets-custard_pudding.jpeg);
+		background-image: url(../image/menu-sweets-custard_pudding.jpg);
 	}/*  */
 	.menu-image01 {
 		width: 600px;
@@ -2356,35 +1921,30 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 /* PC（1025px以上） */
 @media screen and (min-width: 1025px) {
 	.article-menu {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(3.25rem, 14vw, 5rem) 3rem;/* 行の間隔52～80px、列の間隔3rem */
-		/* 上下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(3.25rem, 14vw, 5rem) 3rem;
 	}
 	.menu-area {
-		width: calc(60% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（about-area60%、about-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(60% - 1.5rem);
 		margin: 0 0 clamp(3.25rem, 14vw, 5rem);
-		/* 下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	}
 	.menu-area p {
 		margin-bottom: 0;
 	}
 	.menu-image-area {
-		width: calc(40% - 1.5rem);/* -1.5という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（about-area60%、about-image40%）から、間の余白分（列gapの3remの半分＝1.5rem）を引いた幅 */
+		width: calc(40% - 1.5rem);
 		margin: clamp(3.25rem, 14vw, 5rem) 0;
-		/* 上下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	}
 	.menu-box {
 		&::scroll-button(*) {
-			top: calc(clamp(16.9rem, 26.75vw, 21.074rem) + 0.625rem);/* img高さ270.396～337.188px、26.38vw＝270.396px÷1025px×100 + 10px */
+			top: calc(clamp(16.9rem, 26.75vw, 21.074rem) + 0.625rem);
 			transform: translate(0, 0);
 		}
 		&::scroll-marker-group {
-			overflow-x: visible;/* 横方向にはみ出た分を表示 */
-			flex-wrap: wrap;/* 横一列を防ぎ、親の幅を超えたら自動で折り返す */
-			white-space: normal;/* 通常の折り返し（改行）に戻す */
+			overflow-x: visible;
+			flex-wrap: wrap;
+			white-space: normal;
 			bottom: 0;
 		}
 	}
@@ -2400,16 +1960,12 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 }
 .article-about h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 }
 .about-container {
 	display: flex;
-	flex-direction: column;/* 1025px未満：縦一列に並べる */
+	flex-direction: column;
 	gap: clamp(2.5rem, 10.8vw, 3rem);
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	margin: 0 0 clamp(2.5rem, 10.8vw, 3rem);
-	/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	padding: 0;
 }
 .about-area {
@@ -2419,15 +1975,15 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 	width: 100%;
 	max-width: 600px;
 	aspect-ratio: 2 / 3;
-	align-self: start;/* center、兄弟の高さに引き伸ばされない、初期autoは親要素のalign-items値を継承 */
+	align-self: start;
 }
 .about-coffee,
 .about-terrace {
-	display: block;/* img要素のデフォルトinlineだと行間の余白が含まれて1:1に誤差が出るかも */
+	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;/* containだとアスペクト維持、はみ出さないよう縮小 */
-	object-position: center;/*  */
+	object-fit: cover;
+	object-position: center;
 }
 .column-display {
 	display: block;
@@ -2440,13 +1996,9 @@ summary:hover {/* マウスオーバーでカーソル変わる */
 }
 .map-area h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 }
 iframe {
 	margin: clamp(1.25rem, 5.333vw, 1.5rem) 0 clamp(3.25rem, 14vw, 5rem);
-	/* 上：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
-	/* 下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	width: 100%;
 	max-width: 600px;
 	aspect-ratio: 4 / 3;
@@ -2463,22 +2015,17 @@ iframe {
 @media screen and (min-width: 1025px) {
 	.article-about h2 {
 		margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(2.5rem, 10.8vw, 3rem);
-		/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-		/* 下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 	}
 	.about-container {
-		flex-direction: row;/* 1025px以上：横に並べる */
-		flex-wrap: wrap;/* 子要素の折り返し設定、折り返しあり */
-		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;/* 行の間隔40～48px、列の間隔6rem */
-		/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: clamp(2.5rem, 10.8vw, 3rem) 6rem;
 	}
 	.about-area {
-		width: calc(60% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（about-area60%、about-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(60% - 3rem);
 	}
 	.about-image {
-		width: calc(40% - 3rem);/* -3という値ではなく引き算のマイナスになるようスペースを確保 */
-		/* 2列の各幅（about-area60%、about-image40%）から、間の余白分（列gapの6remの半分＝3rem）を引いた幅 */
+		width: calc(40% - 3rem);
 		aspect-ratio: 3 / 4;
 	}
 	.column-display {
@@ -2489,9 +2036,6 @@ iframe {
 	}
 	.map-area h2 {
 		margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-		/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-		/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
-		/* 上記.article-about h2で上書きされるので再度指定 */
 	}
 }
 
@@ -2502,8 +2046,6 @@ iframe {
 }
 .article-contact h2 {
 	margin: clamp(3.25rem, 14vw, 5rem) 0 clamp(1.25rem, 5.333vw, 1.5rem);
-	/* 上：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
-	/* 下：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
 }
 .contact-area {
 	margin: 0;
@@ -2511,28 +2053,20 @@ iframe {
 }
 .contact-area p:nth-of-type(1) {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0 0;
-	/* 上：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
 .contact-area p:nth-of-type(3) {
 	margin: clamp(2.5rem, 10.8vw, 3rem) 0;
-	/* 上下：最小40px～推奨値ビューポート幅の10.8%～最大48pxの範囲、10.8vw＝40.5px÷375px×100 */
 }
-/* .contact-area form {
-	margin: 30px 30% 0 10%;auto
-	width: 600px;
-} */
 .contact-label {
 	display: flex;
 	justify-content: space-between;
-	/* height: 30px; */
 }
 .contact-input {
 	appearance: none;
 	width: 60%;
 	background-color: #E6E4E0; /* ベースカラー */
-	border-style: none none solid none;/* none */
+	border-style: none none solid none;
 	border-width: thin;
-	/* border-bottom: solid; */
 	font-style: italic;
 }
 .contact-textarea {
@@ -2545,20 +2079,17 @@ iframe {
 .contact-kind {
 	display: inline-block;
 	width: 30px;
-	mix-blend-mode: luminosity; /* difference */
+	mix-blend-mode: luminosity;
 }
 .contact-button{
 	display: flex;
-	justify-content: space-evenly;/* space-around */
+	justify-content: space-between;
 	margin: 0 auto;
-	width: 60%;
+	width: 70%;
+	max-width: 280px;
 }
 .contact-area form button{
-	/* border:none;
-	box-shadow:none; */
 	margin: clamp(1.25rem, 5.333vw, 1.5rem) 0 clamp(3.25rem, 14vw, 5rem);
-	/* 上：最小20px～推奨値ビューポート幅の5.333%～最大24pxの範囲、5.333vw＝20px÷375px×100 */
-	/* 下：最小52px～推奨値ビューポート幅の14%～最大80pxの範囲、14vw＝52.5px÷375px×100 */
 	padding: 0 auto;
 	width: 100px;
 	font-family: '游明朝', serif;
@@ -2582,54 +2113,45 @@ iframe {
 	justify-content: center;
 	align-items: center;
 	position: fixed;
-	right: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100 *//* 30px */
-	bottom: clamp(1.25rem, 4vw, 2rem);/* 20～32px、4vw＝30.72px÷768px×100 *//* 30px */
+	right: clamp(1.25rem, 4vw, 2rem);
+	bottom: clamp(1.25rem, 4vw, 2rem);
 	z-index: 9995;
-	height: 3.125rem;/* 50px */
-	width: 3.125rem;/* 50px */
+	height: 3.125rem;
+	width: 3.125rem;
 	background-color: #2B2721; /* テキストカラー */
-	border: solid 1px #9A9488; /* 黒っぽいグレー、#E6E4E0ベースカラー */
+	border: solid 1px #9A9488;
 	border-radius: 50%;
-	box-shadow: 1px 1px 4px #9A9488; /* 黒っぽいグレー */
+	box-shadow: 1px 1px 4px #9A9488;
 	/* アニメーション開始前の状態 */
 	opacity: 0;
-	transform: /* translateX(100px) */ translateY(100px);
+	transform: translateY(100px);
 	animation-name: slideIn;
 	/* スクロール連動アニメーション */
 	animation: slideIn linear;
-	animation-timeline: view(100px);/* block 40% 30% *//* scroll() */
-	animation-range: cover;/* 100px *//* contain *//* entry 10% exit 90% */
-	animation-fill-mode: forwards;/* アニメーション完了時点を保持 */
+	animation-timeline: view(100px);
+	animation-range: cover;
+	animation-fill-mode: forwards;
 }
 .pagetop-arrow {
-	height: 0.625rem;/* 10px */
-	width: 0.625rem;/* 10px */
+	height: 0.625rem;
+	width: 0.625rem;
 	border-top: 3px solid #E6E4E0; /* ベースカラー */
 	border-right: 3px solid #E6E4E0; /* ベースカラー */
 	transform: translateY(20%) rotate(-45deg);
 }
 /* ページトップのスライドインアニメーション */
 @keyframes slideIn {
-	from {/* 0% */
-		/* display: none; */
-		opacity: 0;
-		filter: blur(4px);
-		transform: /* translateX(100px) */ translateY(100px);
-	}
-	/* 1% {
-		display: block;
+	from {
 		opacity: 0;
 		filter: blur(4px);
 		transform: translateY(100px);
-	} */
+	}
 	15% {
-		/* display: block; */
 		opacity: 1;
 		filter: blur(0);
 		transform: translateY(0);
 	}
-	to {/* 100% */
-		/* display: block; */
+	to {
 		opacity: 1;
 		filter: blur(0);
 		transform: translateY(0);
@@ -2646,7 +2168,7 @@ iframe {
 /* フッター */
 footer {
 	text-align: center;
-	margin: 2.5rem 0 0;/* 40px */
+	margin: 2.5rem 0 0;
 	background-color: #2B2721; /* テキストカラー */
 }
 .top-footer {
@@ -2654,17 +2176,17 @@ footer {
 }
 .site-notice {
 	margin: 0;
-	padding: 1.214rem 0 0;/* 12px×1.618 */
+	padding: 1.214rem 0 0;
 	height: 0.75rem;
-	font-size: 0.75rem;/* 12px */
+	font-size: 0.75rem;
 	line-height: 1;
 	color: #E6E4E0; /* ベースカラー */
 }
 .copyright {
 	margin: 0;
-	padding: 1.963rem 0 1.214rem;/* 12px×1.618×1.618、12px×1.618 */
+	padding: 1.963rem 0 1.214rem;
 	height: 0.75rem;
-	font-size: 0.75rem;/* 12px */
+	font-size: 0.75rem;
 	line-height: 1;
-	color: #E6E4E0;/* ベースカラー */
+	color: #E6E4E0; /* ベースカラー */
 }
